@@ -7,67 +7,98 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2819FAD58DA87CEA95536F7A6FDB15D7 /* Pods-raise your daughter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F40B62CC502B5001A70A6367DFC890D5 /* Pods-raise your daughter-dummy.m */; };
-		311BC3B8D8ADE5B1552C50D8A24F6F09 /* GradientProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2C9E39AD719525F1FF19951C45C88C /* GradientProgressBar.swift */; };
+		311BC3B8D8ADE5B1552C50D8A24F6F09 /* GradientProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DE2376355A88E89DB70D5EB84DDD8 /* GradientProgressBar.swift */; };
+		3BB96BFCB8E6656F4AC102B4748F977B /* SimpleButtonControlState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E53DF859ECF3E927C699FF53EAB741 /* SimpleButtonControlState.swift */; };
+		42ECABD7E56DF0A7B6AC55EA90E340A8 /* SimpleButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 036ECF8FD4D26D84B45CF26AD5BD1907 /* SimpleButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43297216080C2E88B6241D6D805C6EF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		8B80D7C19403F97AF45FB24EC6DA1991 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		BEC386A13124819A2D1ADC0592F331A7 /* Pods-raise your daughter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0F5980D6FF9BA4A6D55AE1F7E5DA5C /* Pods-raise your daughter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4B9FDD788813705346F61272532DD58 /* CGRect+Adjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A87496E3BF638590BB8DDB8DBAE9E /* CGRect+Adjustments.swift */; };
-		D39700EB08FF201580B6D7DBED413798 /* UIColor+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9650D88523B1F2B36994D4A35D84C197 /* UIColor+Initializers.swift */; };
-		E65DA252B1A0115D610AA1415BD8C782 /* GradientProgressBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B913EDDA5947F9FDBB82FE7A1F90507 /* GradientProgressBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0652FF888C8D0A0DFECF4A500251B2B /* GradientProgressBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C75A6BBF543B61F8297DA14B0DCA4C50 /* GradientProgressBar-dummy.m */; };
+		5091269D02FE34DB91ED8FB142AD7D0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		72DAA76DBA7F299F3225252FADFF4335 /* Pods-raise your daughter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F40B62CC502B5001A70A6367DFC890D5 /* Pods-raise your daughter-dummy.m */; };
+		9657D35F672176E9F45865D2306C29F2 /* SimpleButtonStateChangeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609741FFCBFD787A5F9193D827CCD42 /* SimpleButtonStateChangeValue.swift */; };
+		C4B9FDD788813705346F61272532DD58 /* CGRect+Adjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EC2926E78D71BCF2F1B835137F76C5 /* CGRect+Adjustments.swift */; };
+		D39700EB08FF201580B6D7DBED413798 /* UIColor+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316EFE883D6358784600FDDC8BB5A4F /* UIColor+Initializers.swift */; };
+		E14C710349FE8AD52EF8B2A28B0B1F88 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BD5C15352484CE94B26B1CA445DE59 /* SimpleButton.swift */; };
+		E3E58BAC894C3528A5D95AE59C4F1DAC /* SimpleButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4445DF4A80875FC5BD27F56971A9DD79 /* SimpleButton-dummy.m */; };
+		E65DA252B1A0115D610AA1415BD8C782 /* GradientProgressBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFACC701AB61B3684CC3D4819A290F11 /* GradientProgressBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0652FF888C8D0A0DFECF4A500251B2B /* GradientProgressBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE881071634A62C23F16BE8FFCC421 /* GradientProgressBar-dummy.m */; };
+		F6A3ED00AB1CA276886A157C2E6D9471 /* Pods-raise your daughter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0F5980D6FF9BA4A6D55AE1F7E5DA5C /* Pods-raise your daughter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD9A1809C734D83226B77C16648ED334 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F683A6A02B076DF5DF7C3BA95DB7C5F4 /* PBXContainerItemProxy */ = {
+		9CCFD3183A5E89CB31EED2D6D3BA641A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B7692D171793C8F8B233B199FF4A2ACA;
 			remoteInfo = GradientProgressBar;
 		};
+		FD4A03E7DF4BFF73F619FA8E306A96F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C311A72982D4CF4D954AA3E5346C5556;
+			remoteInfo = SimpleButton;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02E8E4CC260FC2782F7BA8D4CDD791B6 /* GradientProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GradientProgressBar.framework; path = GradientProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		036ECF8FD4D26D84B45CF26AD5BD1907 /* SimpleButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleButton-umbrella.h"; sourceTree = "<group>"; };
 		0489DEBE2F198C461C82FF8DFEC65D67 /* Pods-raise your daughter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-raise your daughter.modulemap"; sourceTree = "<group>"; };
-		07CC090B3DB10C8A118F38D68381AF7C /* GradientProgressBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GradientProgressBar.modulemap; sourceTree = "<group>"; };
+		123C9F20C0767B785138B91833CC97E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		160B2D74535D325C5618C4A923601359 /* Pods-raise your daughter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-raise your daughter-acknowledgements.plist"; sourceTree = "<group>"; };
-		310A9128509A54C5D88BFB09781210A3 /* GradientProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientProgressBar-prefix.pch"; sourceTree = "<group>"; };
-		3C2C9E39AD719525F1FF19951C45C88C /* GradientProgressBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientProgressBar.swift; path = GradientProgressBar/Classes/Views/GradientProgressBar.swift; sourceTree = "<group>"; };
-		4B913EDDA5947F9FDBB82FE7A1F90507 /* GradientProgressBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientProgressBar-umbrella.h"; sourceTree = "<group>"; };
-		534BDA89863EC5E8885B814AB6F33D0F /* GradientProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GradientProgressBar.framework; path = GradientProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		537EA561ECF0922C1F2B2ADAFE88D8DB /* GradientProgressBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GradientProgressBar.xcconfig; sourceTree = "<group>"; };
-		5E1A87496E3BF638590BB8DDB8DBAE9E /* CGRect+Adjustments.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Adjustments.swift"; path = "GradientProgressBar/Classes/Helpers/Extensions/CGRect/CGRect+Adjustments.swift"; sourceTree = "<group>"; };
+		24E53DF859ECF3E927C699FF53EAB741 /* SimpleButtonControlState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleButtonControlState.swift; path = SimpleButton/SimpleButtonControlState.swift; sourceTree = "<group>"; };
+		275C6F573875216766B2FB84732C491D /* GradientProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientProgressBar-prefix.pch"; sourceTree = "<group>"; };
+		352DE2376355A88E89DB70D5EB84DDD8 /* GradientProgressBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientProgressBar.swift; path = GradientProgressBar/Classes/Views/GradientProgressBar.swift; sourceTree = "<group>"; };
+		40BD5C15352484CE94B26B1CA445DE59 /* SimpleButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleButton.swift; path = SimpleButton/SimpleButton.swift; sourceTree = "<group>"; };
+		41EC2926E78D71BCF2F1B835137F76C5 /* CGRect+Adjustments.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Adjustments.swift"; path = "GradientProgressBar/Classes/Helpers/Extensions/CGRect/CGRect+Adjustments.swift"; sourceTree = "<group>"; };
+		4445DF4A80875FC5BD27F56971A9DD79 /* SimpleButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleButton-dummy.m"; sourceTree = "<group>"; };
+		60A27DA3D7C5E8B9B811DEB363DD730E /* SimpleButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleButton.xcconfig; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		69870C37A816E8348DA0CB2482440CBC /* SimpleButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimpleButton.framework; path = SimpleButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E97D9F35420798EA52FA901B1BEED28 /* GradientProgressBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GradientProgressBar.xcconfig; sourceTree = "<group>"; };
 		6F0F5980D6FF9BA4A6D55AE1F7E5DA5C /* Pods-raise your daughter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-raise your daughter-umbrella.h"; sourceTree = "<group>"; };
-		7A61163FD9708C7C061AE92E58D1A7BE /* Pods_raise_your_daughter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_raise_your_daughter.framework; path = "Pods-raise your daughter.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72BC065A73F8B77E44961160FEC7D7AD /* SimpleButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SimpleButton.modulemap; sourceTree = "<group>"; };
+		77BE7376F4DFC026ECFC7E64AE35DA4D /* SimpleButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleButton-prefix.pch"; sourceTree = "<group>"; };
+		81EE881071634A62C23F16BE8FFCC421 /* GradientProgressBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GradientProgressBar-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9650D88523B1F2B36994D4A35D84C197 /* UIColor+Initializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Initializers.swift"; path = "GradientProgressBar/Classes/Helpers/Extensions/UIColor/UIColor+Initializers.swift"; sourceTree = "<group>"; };
 		9AB6157BB3D19392C2D9F83634900A92 /* Pods-raise your daughter-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-raise your daughter-resources.sh"; sourceTree = "<group>"; };
-		C75A6BBF543B61F8297DA14B0DCA4C50 /* GradientProgressBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GradientProgressBar-dummy.m"; sourceTree = "<group>"; };
-		D401BCB9F91173A894C0ABFD7EE44D21 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A316EFE883D6358784600FDDC8BB5A4F /* UIColor+Initializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Initializers.swift"; path = "GradientProgressBar/Classes/Helpers/Extensions/UIColor/UIColor+Initializers.swift"; sourceTree = "<group>"; };
+		A609741FFCBFD787A5F9193D827CCD42 /* SimpleButtonStateChangeValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleButtonStateChangeValue.swift; path = SimpleButton/SimpleButtonStateChangeValue.swift; sourceTree = "<group>"; };
+		B4A680F230C6D748405E5B7F9D515FF0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4A6EDC1E7BB597BC9C0257A683212FF /* GradientProgressBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GradientProgressBar.modulemap; sourceTree = "<group>"; };
 		D6F0296FFA4E0A04734B0A783B7A3DCD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D962DB65B1784D8B47128A262209AB2B /* Pods-raise your daughter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-raise your daughter.release.xcconfig"; sourceTree = "<group>"; };
 		DB353CA397870F4443DE0D5E217C33F5 /* Pods-raise your daughter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-raise your daughter-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DB7AE54F8F758A71B37E0F4ADB970EF8 /* Pods-raise your daughter-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-raise your daughter-frameworks.sh"; sourceTree = "<group>"; };
 		E2E9D0E6B2168F6448C0755A0FD55E9A /* Pods-raise your daughter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-raise your daughter.debug.xcconfig"; sourceTree = "<group>"; };
+		E386A90B8B754AF0419FCF2A58B17638 /* Pods_raise_your_daughter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_raise_your_daughter.framework; path = "Pods-raise your daughter.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40B62CC502B5001A70A6367DFC890D5 /* Pods-raise your daughter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-raise your daughter-dummy.m"; sourceTree = "<group>"; };
+		FFACC701AB61B3684CC3D4819A290F11 /* GradientProgressBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientProgressBar-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9F879BE5849870C3CF39E0600BFD70B5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B80D7C19403F97AF45FB24EC6DA1991 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BF3B925262DBBF97E054E354E0083D9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				43297216080C2E88B6241D6D805C6EF2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D91A6A4D33AA9769C73EF4FB813A7877 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5091269D02FE34DB91ED8FB142AD7D0D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1657BB989C293B3E08D39F74C19D56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9A1809C734D83226B77C16648ED334 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,30 +113,39 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		31CCE689944F769F3072DCF6A36E4473 /* Products */ = {
+		4B5C4007AC3991A6B926A88AEB00AB4F /* SimpleButton */ = {
 			isa = PBXGroup;
 			children = (
-				534BDA89863EC5E8885B814AB6F33D0F /* GradientProgressBar.framework */,
-				7A61163FD9708C7C061AE92E58D1A7BE /* Pods_raise_your_daughter.framework */,
+				40BD5C15352484CE94B26B1CA445DE59 /* SimpleButton.swift */,
+				24E53DF859ECF3E927C699FF53EAB741 /* SimpleButtonControlState.swift */,
+				A609741FFCBFD787A5F9193D827CCD42 /* SimpleButtonStateChangeValue.swift */,
+				618353014B681CB45D4715FCCFEE5E72 /* Support Files */,
 			);
-			name = Products;
+			name = SimpleButton;
+			path = SimpleButton;
 			sourceTree = "<group>";
 		};
-		402F3D393A8FE14A6ED99A22A58A5DD7 /* Pods */ = {
+		618353014B681CB45D4715FCCFEE5E72 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5511BEAEF1B2F13B4B48CACD051CC186 /* GradientProgressBar */,
+				123C9F20C0767B785138B91833CC97E7 /* Info.plist */,
+				72BC065A73F8B77E44961160FEC7D7AD /* SimpleButton.modulemap */,
+				60A27DA3D7C5E8B9B811DEB363DD730E /* SimpleButton.xcconfig */,
+				4445DF4A80875FC5BD27F56971A9DD79 /* SimpleButton-dummy.m */,
+				77BE7376F4DFC026ECFC7E64AE35DA4D /* SimpleButton-prefix.pch */,
+				036ECF8FD4D26D84B45CF26AD5BD1907 /* SimpleButton-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/SimpleButton";
 			sourceTree = "<group>";
 		};
-		5511BEAEF1B2F13B4B48CACD051CC186 /* GradientProgressBar */ = {
+		625C2446CF7E25F3648818A015161FB7 /* GradientProgressBar */ = {
 			isa = PBXGroup;
 			children = (
-				5E1A87496E3BF638590BB8DDB8DBAE9E /* CGRect+Adjustments.swift */,
-				3C2C9E39AD719525F1FF19951C45C88C /* GradientProgressBar.swift */,
-				9650D88523B1F2B36994D4A35D84C197 /* UIColor+Initializers.swift */,
-				8BA750B7B2C91EBBFD28A6162CE83527 /* Support Files */,
+				41EC2926E78D71BCF2F1B835137F76C5 /* CGRect+Adjustments.swift */,
+				352DE2376355A88E89DB70D5EB84DDD8 /* GradientProgressBar.swift */,
+				A316EFE883D6358784600FDDC8BB5A4F /* UIColor+Initializers.swift */,
+				F03E05DF7BFF3FDB69DBC78A7FA08C10 /* Support Files */,
 			);
 			name = GradientProgressBar;
 			path = GradientProgressBar;
@@ -134,24 +174,19 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				402F3D393A8FE14A6ED99A22A58A5DD7 /* Pods */,
-				31CCE689944F769F3072DCF6A36E4473 /* Products */,
+				A9502A2C1C91AF78029DB8D7608811C7 /* Pods */,
+				CD6AF61E72BD7433CDDE1274B794DF6A /* Products */,
 				18A8E3515AF15CDB4B52CED4610FDBCF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8BA750B7B2C91EBBFD28A6162CE83527 /* Support Files */ = {
+		A9502A2C1C91AF78029DB8D7608811C7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				07CC090B3DB10C8A118F38D68381AF7C /* GradientProgressBar.modulemap */,
-				537EA561ECF0922C1F2B2ADAFE88D8DB /* GradientProgressBar.xcconfig */,
-				C75A6BBF543B61F8297DA14B0DCA4C50 /* GradientProgressBar-dummy.m */,
-				310A9128509A54C5D88BFB09781210A3 /* GradientProgressBar-prefix.pch */,
-				4B913EDDA5947F9FDBB82FE7A1F90507 /* GradientProgressBar-umbrella.h */,
-				D401BCB9F91173A894C0ABFD7EE44D21 /* Info.plist */,
+				625C2446CF7E25F3648818A015161FB7 /* GradientProgressBar */,
+				4B5C4007AC3991A6B926A88AEB00AB4F /* SimpleButton */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/GradientProgressBar";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -162,12 +197,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD6AF61E72BD7433CDDE1274B794DF6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02E8E4CC260FC2782F7BA8D4CDD791B6 /* GradientProgressBar.framework */,
+				E386A90B8B754AF0419FCF2A58B17638 /* Pods_raise_your_daughter.framework */,
+				69870C37A816E8348DA0CB2482440CBC /* SimpleButton.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		F03E05DF7BFF3FDB69DBC78A7FA08C10 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4A6EDC1E7BB597BC9C0257A683212FF /* GradientProgressBar.modulemap */,
+				6E97D9F35420798EA52FA901B1BEED28 /* GradientProgressBar.xcconfig */,
+				81EE881071634A62C23F16BE8FFCC421 /* GradientProgressBar-dummy.m */,
+				275C6F573875216766B2FB84732C491D /* GradientProgressBar-prefix.pch */,
+				FFACC701AB61B3684CC3D4819A290F11 /* GradientProgressBar-umbrella.h */,
+				B4A680F230C6D748405E5B7F9D515FF0 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GradientProgressBar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,11 +240,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C026FCB34676CC0A85A7422FE4F50FB /* Headers */ = {
+		B916FF65DDB2F7B6823D8062F8258FCE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC386A13124819A2D1ADC0592F331A7 /* Pods-raise your daughter-umbrella.h in Headers */,
+				F6A3ED00AB1CA276886A157C2E6D9471 /* Pods-raise your daughter-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6521B8426D2848D73F660CED3715D48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42ECABD7E56DF0A7B6AC55EA90E340A8 /* SimpleButton-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,25 +273,43 @@
 			);
 			name = GradientProgressBar;
 			productName = GradientProgressBar;
-			productReference = 534BDA89863EC5E8885B814AB6F33D0F /* GradientProgressBar.framework */;
+			productReference = 02E8E4CC260FC2782F7BA8D4CDD791B6 /* GradientProgressBar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EC4B5401F08E8D144A4395E23D2095D6 /* Pods-raise your daughter */ = {
+		C1B6F450C0D8A340906562D12DE0F207 /* Pods-raise your daughter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 153A62D65E2FC4E9191BE7F9D054196A /* Build configuration list for PBXNativeTarget "Pods-raise your daughter" */;
+			buildConfigurationList = EE4AA3BBAE481C2F83F7F865021F7DE8 /* Build configuration list for PBXNativeTarget "Pods-raise your daughter" */;
 			buildPhases = (
-				460AC3CD492653C6468697FCA8F4EF6F /* Sources */,
-				9F879BE5849870C3CF39E0600BFD70B5 /* Frameworks */,
-				9C026FCB34676CC0A85A7422FE4F50FB /* Headers */,
+				9F142B68CA0EACF814CC45DD6820120B /* Sources */,
+				D91A6A4D33AA9769C73EF4FB813A7877 /* Frameworks */,
+				B916FF65DDB2F7B6823D8062F8258FCE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CD55523C6EC97292FD290C0822BFE2DE /* PBXTargetDependency */,
+				1D4B6B52415779192A1E688B6EC037FE /* PBXTargetDependency */,
+				4B2BED164E0DF994DC310057F0FA972C /* PBXTargetDependency */,
 			);
 			name = "Pods-raise your daughter";
 			productName = "Pods-raise your daughter";
-			productReference = 7A61163FD9708C7C061AE92E58D1A7BE /* Pods_raise_your_daughter.framework */;
+			productReference = E386A90B8B754AF0419FCF2A58B17638 /* Pods_raise_your_daughter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C311A72982D4CF4D954AA3E5346C5556 /* SimpleButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C09442EA98EE832ACF867E1A0DD4E176 /* Build configuration list for PBXNativeTarget "SimpleButton" */;
+			buildPhases = (
+				9821E550095411FC2E15598F9C6A73C0 /* Sources */,
+				EE1657BB989C293B3E08D39F74C19D56 /* Frameworks */,
+				D6521B8426D2848D73F660CED3715D48 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleButton;
+			productName = SimpleButton;
+			productReference = 69870C37A816E8348DA0CB2482440CBC /* SimpleButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -244,22 +329,34 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 31CCE689944F769F3072DCF6A36E4473 /* Products */;
+			productRefGroup = CD6AF61E72BD7433CDDE1274B794DF6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B7692D171793C8F8B233B199FF4A2ACA /* GradientProgressBar */,
-				EC4B5401F08E8D144A4395E23D2095D6 /* Pods-raise your daughter */,
+				C1B6F450C0D8A340906562D12DE0F207 /* Pods-raise your daughter */,
+				C311A72982D4CF4D954AA3E5346C5556 /* SimpleButton */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		460AC3CD492653C6468697FCA8F4EF6F /* Sources */ = {
+		9821E550095411FC2E15598F9C6A73C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2819FAD58DA87CEA95536F7A6FDB15D7 /* Pods-raise your daughter-dummy.m in Sources */,
+				E3E58BAC894C3528A5D95AE59C4F1DAC /* SimpleButton-dummy.m in Sources */,
+				E14C710349FE8AD52EF8B2A28B0B1F88 /* SimpleButton.swift in Sources */,
+				3BB96BFCB8E6656F4AC102B4748F977B /* SimpleButtonControlState.swift in Sources */,
+				9657D35F672176E9F45865D2306C29F2 /* SimpleButtonStateChangeValue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F142B68CA0EACF814CC45DD6820120B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72DAA76DBA7F299F3225252FADFF4335 /* Pods-raise your daughter-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,18 +374,58 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CD55523C6EC97292FD290C0822BFE2DE /* PBXTargetDependency */ = {
+		1D4B6B52415779192A1E688B6EC037FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GradientProgressBar;
 			target = B7692D171793C8F8B233B199FF4A2ACA /* GradientProgressBar */;
-			targetProxy = F683A6A02B076DF5DF7C3BA95DB7C5F4 /* PBXContainerItemProxy */;
+			targetProxy = 9CCFD3183A5E89CB31EED2D6D3BA641A /* PBXContainerItemProxy */;
+		};
+		4B2BED164E0DF994DC310057F0FA972C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimpleButton;
+			target = C311A72982D4CF4D954AA3E5346C5556 /* SimpleButton */;
+			targetProxy = FD4A03E7DF4BFF73F619FA8E306A96F1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0CE3B7D7CDA5D4CCF43FCA6D358A9BE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D962DB65B1784D8B47128A262209AB2B /* Pods-raise your daughter.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-raise your daughter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-raise your daughter/Pods-raise your daughter.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_raise_your_daughter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		1678C788CA4E4517439A0C4F38D3853D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 537EA561ECF0922C1F2B2ADAFE88D8DB /* GradientProgressBar.xcconfig */;
+			baseConfigurationReference = 6E97D9F35420798EA52FA901B1BEED28 /* GradientProgressBar.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -317,9 +454,9 @@
 			};
 			name = Debug;
 		};
-		20E3D2ED461F9FDAED275EDAA5459E6F /* Debug */ = {
+		19B9EF00DD61B4C49918B26D171A6A20 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2E9D0E6B2168F6448C0755A0FD55E9A /* Pods-raise your daughter.debug.xcconfig */;
+			baseConfigurationReference = 60A27DA3D7C5E8B9B811DEB363DD730E /* SimpleButton.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -330,26 +467,24 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-raise your daughter/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleButton/SimpleButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleButton/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-raise your daughter/Pods-raise your daughter.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_raise_your_daughter;
+				MODULEMAP_FILE = "Target Support Files/SimpleButton/SimpleButton.modulemap";
+				PRODUCT_NAME = SimpleButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -411,6 +546,37 @@
 			};
 			name = Debug;
 		};
+		7D27BD1CC9FF30109BD16FD73DD4FCC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60A27DA3D7C5E8B9B811DEB363DD730E /* SimpleButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleButton/SimpleButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimpleButton/SimpleButton.modulemap";
+				PRODUCT_NAME = SimpleButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -466,9 +632,9 @@
 			};
 			name = Release;
 		};
-		D6203550E0DC1511FD3C085B794542A4 /* Release */ = {
+		F39132C86D947BB0D1A988E9190E78A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D962DB65B1784D8B47128A262209AB2B /* Pods-raise your daughter.release.xcconfig */;
+			baseConfigurationReference = E2E9D0E6B2168F6448C0755A0FD55E9A /* Pods-raise your daughter.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -492,17 +658,17 @@
 				PRODUCT_NAME = Pods_raise_your_daughter;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		F910815E8000CB338E511AB841A3435D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 537EA561ECF0922C1F2B2ADAFE88D8DB /* GradientProgressBar.xcconfig */;
+			baseConfigurationReference = 6E97D9F35420798EA52FA901B1BEED28 /* GradientProgressBar.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -535,15 +701,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		153A62D65E2FC4E9191BE7F9D054196A /* Build configuration list for PBXNativeTarget "Pods-raise your daughter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				20E3D2ED461F9FDAED275EDAA5459E6F /* Debug */,
-				D6203550E0DC1511FD3C085B794542A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -558,6 +715,24 @@
 			buildConfigurations = (
 				1678C788CA4E4517439A0C4F38D3853D /* Debug */,
 				F910815E8000CB338E511AB841A3435D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C09442EA98EE832ACF867E1A0DD4E176 /* Build configuration list for PBXNativeTarget "SimpleButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D27BD1CC9FF30109BD16FD73DD4FCC7 /* Debug */,
+				19B9EF00DD61B4C49918B26D171A6A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4AA3BBAE481C2F83F7F865021F7DE8 /* Build configuration list for PBXNativeTarget "Pods-raise your daughter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F39132C86D947BB0D1A988E9190E78A7 /* Debug */,
+				0CE3B7D7CDA5D4CCF43FCA6D358A9BE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -10,7 +10,7 @@ import UIKit
 import GradientProgressBar
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var textLable: UILabel!
@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        
         //Using cocoapod gradient
         progressView.setProgress(0, animated: true)
         
@@ -50,13 +51,13 @@ class ViewController: UIViewController {
         if (savePointDefault.value(forKey: "savePoint") != nil){
             save = savePointDefault.value(forKey: "savePoint") as! Int
             if (save <= 6) { // WARNING NEED FIXING SO IT DOESNT CRASH ***  MAYBE USE TRY AND CATCH
-            //reset the story , reset the buttons' labels
-            textLable.text = Data.data[save][0]
-            button1Label.text = Data.data[save][1]
-            button2Label.text = Data.data[save][2]
-            //pictureStoryView. NEED TO ADD IMAGE AND CHANGE IT ACCORDING TO STORY <-------WORKING ON !!!!!
-            //TESTING PictureStoryView
-            pictureStoryView.image = UIImage(named:String(save))
+                //reset the story , reset the buttons' labels
+                textLable.text = Data.data[save][0]
+                button1Label.text = Data.data[save][1]
+                button2Label.text = Data.data[save][2]
+                //pictureStoryView. NEED TO ADD IMAGE AND CHANGE IT ACCORDING TO STORY <-------WORKING ON !!!!!
+                //TESTING PictureStoryView
+                pictureStoryView.image = UIImage(named:String(save))
             }
             else {
                 print("save is too big")
@@ -65,14 +66,14 @@ class ViewController: UIViewController {
                 self.viewDidLoad()
             }
         }
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func button1Tapped(_ sender: Any) {
         whichButton = 1
         if(save*2+1>5){
@@ -92,9 +93,9 @@ class ViewController: UIViewController {
             
             //delay and then call moveOn ... so i can use the skip button
             perform(#selector(moveOn1), with: nil , afterDelay: 10)
-         
+            
         }
-
+        
     }
     
     @IBAction func button2Tapped(_ sender: Any) {
@@ -145,8 +146,8 @@ class ViewController: UIViewController {
         savePointDefault.setValue(x, forKey: "savePoint")
         savePointDefault.synchronize()
     }
-
-
+    
+    
     
     
     //skipButton action
@@ -165,10 +166,10 @@ class ViewController: UIViewController {
     }
     
     
-   //disable button1 and button2
+    //disable button1 and button2
     func disableButtons(){
-            button1.isEnabled = false
-            button2.isEnabled = false
+        button1.isEnabled = false
+        button2.isEnabled = false
     }
     //enable button1 and button2
     func enablebuttons(){

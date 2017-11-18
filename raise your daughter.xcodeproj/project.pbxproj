@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B548C4E1FBF45480043F2D2 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B548C4D1FBF45480043F2D2 /* CustomButtons.swift */; };
 		0B5640251FBA6774009E66F6 /* MyCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B56401A1FBA6772009E66F6 /* MyCoreDataModel.xcdatamodeld */; };
 		0B5640261FBA6774009E66F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B56401C1FBA6773009E66F6 /* Assets.xcassets */; };
 		0B5640271FBA6774009E66F6 /* homeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B56401D1FBA6773009E66F6 /* homeScreen.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0B07F6E31F867D21007C1C39 /* raise your daughter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "raise your daughter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B548C4D1FBF45480043F2D2 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		0B56401B1FBA6772009E66F6 /* MyCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		0B56401C1FBA6773009E66F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B56401D1FBA6773009E66F6 /* homeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreen.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		0B07F6E51F867D22007C1C39 /* raise your daughter */ = {
 			isa = PBXGroup;
 			children = (
+				0B548C4A1FBF450A0043F2D2 /* Custom Button Classes */,
 				0B56401E1FBA6773009E66F6 /* AppDelegate.swift */,
 				0B56401C1FBA6773009E66F6 /* Assets.xcassets */,
 				0B69BFFE1FBDF0380064F2C8 /* Launch Screen.storyboard */,
@@ -78,6 +81,14 @@
 				0BB193561FBA68B300711428 /* Info.plist */,
 			);
 			path = "raise your daughter";
+			sourceTree = "<group>";
+		};
+		0B548C4A1FBF450A0043F2D2 /* Custom Button Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0B548C4D1FBF45480043F2D2 /* CustomButtons.swift */,
+			);
+			path = "Custom Button Classes";
 			sourceTree = "<group>";
 		};
 		52247D33A4CBAC224A0C22D0 /* Pods */ = {
@@ -178,10 +189,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-raise your daughter/Pods-raise your daughter-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GradientProgressBar/GradientProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleButton/SimpleButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -232,6 +245,7 @@
 				0B5640271FBA6774009E66F6 /* homeScreen.swift in Sources */,
 				0B56402A1FBA6774009E66F6 /* ViewController.swift in Sources */,
 				0B56402D1FBA6774009E66F6 /* data.swift in Sources */,
+				0B548C4E1FBF45480043F2D2 /* CustomButtons.swift in Sources */,
 				0B5640251FBA6774009E66F6 /* MyCoreDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

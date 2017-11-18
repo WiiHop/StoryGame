@@ -1,12 +1,15 @@
 PODS:
   - GradientProgressBar (1.1.3)
+  - SimpleButton (3.0.1)
 
 DEPENDENCIES:
   - GradientProgressBar (~> 1.1)
+  - SimpleButton (~> 3.0)
 
 SPEC CHECKSUMS:
   GradientProgressBar: 82282435820db08a49164a5d71be52d51e7b3183
+  SimpleButton: 60e2454b052751b69bbaa8342d97ba91d8bfd7d2
 
-PODFILE CHECKSUM: 073a4e15e0c6521ac3433b9d451943999d2e19ef
+PODFILE CHECKSUM: 3ec80d3a7fce5e07fd16f0bbac6ba75bf65c33da
 
 COCOAPODS: 1.3.1
