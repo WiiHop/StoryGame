@@ -9,11 +9,13 @@
 import UIKit
 
 class homeScreen: UIViewController {
+    @IBOutlet weak var highscoreNumLable: UILabel!
+    //declare variables
+    var highscore = Highscore.highscore
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,7 +34,13 @@ class homeScreen: UIViewController {
     }
     */
     
-    //
+    override func viewDidAppear(_ animated: Bool) {
+        
+        // MARK: Highscore Setting
+        highscore = Highscore.highscore
+        highscoreNumLable.text = String(highscore)
+    }
+    
     @IBAction func newGameButtonTapped(_ sender: Any) {
         
     }

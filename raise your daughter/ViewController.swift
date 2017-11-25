@@ -9,6 +9,7 @@ import CoreData
 import UIKit
 import GradientProgressBar
 import SimpleButton
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var button2: UIButton!
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
     var whichButton = 0 // which button is tapped
     var timeCounter = 0.0
     var timer = Timer()
+    var highscore = Highscore.highscore
     
     //hide the status bar
     override var prefersStatusBarHidden: Bool {
@@ -38,7 +40,17 @@ class ViewController: UIViewController {
     
     // MARK: ViewDidLoad()
     override func viewDidLoad() {
+
 print("save = " + String(save))
+        //save highscore
+            if (highscore < save) {
+                Highscore.setHighscore(x: save)
+                highscore = save
+                
+                print("Highscore= " + String(Highscore.highscore))
+            }
+        
+        
         //Enable button
         enablebuttons()
         
@@ -56,13 +68,18 @@ print("save = " + String(save))
         //this will set save to where it used to be last time played
         if (savePointDefault.value(forKey: "savePoint") != nil){
             save = savePointDefault.value(forKey: "savePoint") as! Int
+            
+            //set Original highscore
+            Highscore.setHighscore(x: save)
+            
             if (save <= 6) { // WARNING NEED FIXING SO IT DOESNT CRASH ***  MAYBE USE TRY AND CATCH
+                
                 //reset the story , reset the buttons' labels
                 textLable.text = Data.data[save][0]
                 button1Label.text = Data.data[save][1]
                 button2Label.text = Data.data[save][2]
-                //pictureStoryView. NEED TO ADD IMAGE AND CHANGE IT ACCORDING TO STORY <-------WORKING ON !!!!!
-                //TESTING PictureStoryView
+                
+                //set PictureStoryView to appropriate picture
                 pictureStoryView.image = UIImage(named:String(save))
             }
             else {
@@ -90,7 +107,7 @@ print("This data.correct =" + String(Data.correctButton[save]))
             disableButtons()
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 self.save = 0
-                self.saveFunc(x: 0);
+                //self.saveFunc(x: 0); reset everytime they lose
                 self.viewDidLoad()
             }
 
@@ -121,7 +138,7 @@ print("This data.correct =" + String(Data.correctButton[save]))
             disableButtons()
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 self.save = 0
-                self.saveFunc(x: 0);
+                //self.saveFunc(x: 0); reset everytime the lose
                 self.viewDidLoad()
             }
 
@@ -172,7 +189,10 @@ print("This data.correct =" + String(Data.correctButton[save]))
         savePointDefault.setValue(x, forKey: "savePoint")
         savePointDefault.synchronize()
     }
-    
+    func setHighscore(x:Int){
+        savePointDefault.setValue(x, forKey: "highscore")
+        savePointDefault.synchronize()
+    }
     
     
     

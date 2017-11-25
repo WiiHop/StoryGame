@@ -124,6 +124,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="highscoreNumLable" destination="1bC-E9-cck" id="TVg-gU-vmb"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="gotoGameScreen" animates="NO" id="InN-xB-MXF"/>
                     </connections>
                 </viewController>
