@@ -13,17 +13,17 @@ class Data {
 //    INNER index:    0              1              2                  3                4
 //    INNER value: storyDetails  button1Label    button2Label    button1Action    button2Action
     static var data = [
-                        ["story1",
-                        "story1Button1",
-                        "story1Button2",
-                        "story1Button1Action",
-                        "story1Button2Action"],
+                        ["You saw a fox!",
+                        "pet it",
+                        "slap it",
+                        "the fox bites you",
+                        "the fox ran away"],
 
-                       ["story2",
-                        "story2Button1",
-                        "story2Button2",
-                        "story2Button1Action",
-                        "story2Button2Action"],
+                       ["You DEAD!",
+                        "X__X",
+                        "X__X",
+                        "X__X",
+                        "X__X"],
 
                        ["story3",
                         "story3Button1",

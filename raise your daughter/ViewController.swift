@@ -8,7 +8,7 @@
 import CoreData
 import UIKit
 import GradientProgressBar
-
+import SimpleButton
 class ViewController: UIViewController {
     
     @IBOutlet weak var button2: UIButton!
@@ -36,16 +36,16 @@ class ViewController: UIViewController {
         return true
     }
     
-    
+    // MARK: ViewDidLoad()
     override func viewDidLoad() {
-        
         
         //Using cocoapod gradient
         progressView.setProgress(0, animated: true)
+        progressView.isHidden = true
         
         super.viewDidLoad()
         //disable and hide skipButtons
-        skipButton.isHidden = false
+        skipButton.isHidden = true
         
         //this will set save to where it used to be last time played
         if (savePointDefault.value(forKey: "savePoint") != nil){
@@ -82,11 +82,11 @@ class ViewController: UIViewController {
             saveFunc(x: 0);
             self.viewDidLoad()
         } else {
-            
+            //SHOW SKIP BUTTON AND PROGRESS BAR
+            progressView.isHidden = false
+            showSkipButton()
             //timer use for action timing
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
-            
-            hideViews() // show skip button
             disableButtons()
             print("button1 tapped")
             self.textLable.text = Data.data[save][3]
@@ -106,11 +106,11 @@ class ViewController: UIViewController {
             saveFunc(x: 0);
             self.viewDidLoad()
         } else {
-            
+            //SHOW SKIP BUTTON AND PROGRESS BAR
+            progressView.isHidden = false
+            showSkipButton()
             //timer use for action timing
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
-            
-            hideViews() // show skip button
             disableButtons()
             print("button 2 tapped")
             self.textLable.text = Data.data[save][4]
@@ -120,6 +120,12 @@ class ViewController: UIViewController {
             perform(#selector(moveOn2), with: nil , afterDelay: 10)
             
         }
+    }
+    
+    //nothing fuction
+    @objc func showSkipButton(){
+        hideViews() // show skip button
+        disableButtons()
     }
     
     //need to simplify these two methods
@@ -181,12 +187,16 @@ class ViewController: UIViewController {
     func hideViews(){
         button1View.isHidden = true
         button2View.isHidden = true
+        skipButton.isHidden = false
     }
     
     func showViews(){
         button1View.isHidden = false
         button2View.isHidden = false
+        enablebuttons()
+        skipButton.isHidden = true
     }
+    
     
     //timer function WARNNING WORKING ON!!!!
     @objc func updateTimeCounter() {
@@ -197,6 +207,7 @@ class ViewController: UIViewController {
             print(timeCounter)
         } else {
             resetTimer()
+            
         }
     }
     

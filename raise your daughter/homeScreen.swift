@@ -15,13 +15,13 @@ class homeScreen: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -40,6 +40,10 @@ class homeScreen: UIViewController {
     //This code segue to the homescreen
     @IBAction func segueToGameScreenButton(_ sender: Any) {
         performSegue(withIdentifier: "gotoGameScreen", sender: nil)
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
 }
