@@ -38,6 +38,12 @@ class ViewController: UIViewController {
     
     // MARK: ViewDidLoad()
     override func viewDidLoad() {
+print("save = " + String(save))
+        //Enable button
+        enablebuttons()
+        
+        //show button views
+        showViews()
         
         //Using cocoapod gradient
         progressView.setProgress(0, animated: true)
@@ -46,7 +52,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //disable and hide skipButtons
         skipButton.isHidden = true
-        
+
         //this will set save to where it used to be last time played
         if (savePointDefault.value(forKey: "savePoint") != nil){
             save = savePointDefault.value(forKey: "savePoint") as! Int
@@ -76,11 +82,18 @@ class ViewController: UIViewController {
     
     @IBAction func button1Tapped(_ sender: Any) {
         whichButton = 1
-        if(save*2+1>5){
+        if(save>6 || Data.correctButton[save] != 2){
+print("This data.correct =" + String(Data.correctButton[save]))
             print("inside if")
-            save = 0
-            saveFunc(x: 0);
-            self.viewDidLoad()
+            //Show dead story and delay
+            showDeadStory()
+            disableButtons()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                self.save = 0
+                self.saveFunc(x: 0);
+                self.viewDidLoad()
+            }
+
         } else {
             //SHOW SKIP BUTTON AND PROGRESS BAR
             progressView.isHidden = false
@@ -100,11 +113,18 @@ class ViewController: UIViewController {
     
     @IBAction func button2Tapped(_ sender: Any) {
         whichButton = 2
-        if(save*2+1>5){
+        if(save>6 || Data.correctButton[save] != 1){
+            print("This data.correct =" + String(Data.correctButton[save]))
             print("inside if")
-            save = 0
-            saveFunc(x: 0);
-            self.viewDidLoad()
+            //Show dead story and delay
+            showDeadStory()
+            disableButtons()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                self.save = 0
+                self.saveFunc(x: 0);
+                self.viewDidLoad()
+            }
+
         } else {
             //SHOW SKIP BUTTON AND PROGRESS BAR
             progressView.isHidden = false
@@ -122,7 +142,7 @@ class ViewController: UIViewController {
         }
     }
     
-    //nothing fuction
+    //show skip button and do nothing
     @objc func showSkipButton(){
         hideViews() // show skip button
         disableButtons()
@@ -130,14 +150,14 @@ class ViewController: UIViewController {
     
     //need to simplify these two methods
     @objc func moveOn1(){
-        self.saveFunc(x: self.save*2+1);
+        self.saveFunc(x: self.save+1);
         enablebuttons() // enable buttons
         self.viewDidLoad()
         showViews()
     }
     
     @objc func moveOn2(){
-        self.saveFunc(x: self.save*2+2);
+        self.saveFunc(x: self.save+1);
         enablebuttons() // enable buttons
         self.viewDidLoad()
         showViews()
@@ -160,11 +180,9 @@ class ViewController: UIViewController {
     @IBAction func skipButtonTapped(_ sender: Any) {
         NSObject.cancelPreviousPerformRequests(withTarget: self)
         if(whichButton == 1){
-            //NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(moveOn1), object: nil)
             moveOn1()
             resetTimer()
         } else {
-            //NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(moveOn2), object: nil)
             moveOn2()
             resetTimer()
         }
@@ -178,7 +196,7 @@ class ViewController: UIViewController {
         button2.isEnabled = false
     }
     //enable button1 and button2
-    func enablebuttons(){
+    @objc func enablebuttons(){
         button1.isEnabled = true
         button2.isEnabled = true
     }
@@ -220,6 +238,18 @@ class ViewController: UIViewController {
     @IBAction func segueToHomeScreenButton(_ sender: Any) {
         dismiss(animated: false, completion: nil)
     }
+    
+    func showDeadStory() {
+
+        DispatchQueue.main.async {
+            self.textLable.text = Data.deadStories[self.save]
+            self.pictureStoryView.image = UIImage(named:"dead1") //+String(self.save)
+            self.button1View.isHidden = true
+            self.button2View.isHidden = true
+        }
+    }
+    
+    
     
 }
 

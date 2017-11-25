@@ -40,5 +40,7 @@ class Data {
                        ["ending4","","","",""]
         
          ]
+    static var deadStories = ["fox riped your dead out","1","2","3","4","5","6"]
+    static var correctButton = [2,1,2,1,2,1,2]
 
 }
