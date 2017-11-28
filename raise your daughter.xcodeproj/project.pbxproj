@@ -16,7 +16,9 @@
 		0B56402B1FBA6774009E66F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5640211FBA6773009E66F6 /* Main.storyboard */; };
 		0B56402D1FBA6774009E66F6 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5640231FBA6774009E66F6 /* data.swift */; };
 		0B69BFFF1FBDF0380064F2C8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B69BFFE1FBDF0380064F2C8 /* Launch Screen.storyboard */; };
-		0B9379F71FC9C7A60061D9B8 /* ShareMethodsAndVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9379F61FC9C7A60061D9B8 /* ShareMethodsAndVariables.swift */; };
+		0B9379F71FC9C7A60061D9B8 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9379F61FC9C7A60061D9B8 /* HighScore.swift */; };
+		0B9379F91FCA4B930061D9B8 /* SavePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9379F81FCA4B930061D9B8 /* SavePoint.swift */; };
+		0B9379FB1FCA50460061D9B8 /* StoryManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9379FA1FCA50460061D9B8 /* StoryManagement.swift */; };
 		1609EF367C5EACAAA5BED8A1 /* Pods_raise_your_daughter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549E91FFB5175D04CA3A0480 /* Pods_raise_your_daughter.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +33,9 @@
 		0B5640211FBA6773009E66F6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0B5640231FBA6774009E66F6 /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		0B69BFFE1FBDF0380064F2C8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		0B9379F61FC9C7A60061D9B8 /* ShareMethodsAndVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareMethodsAndVariables.swift; sourceTree = "<group>"; };
+		0B9379F61FC9C7A60061D9B8 /* HighScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
+		0B9379F81FCA4B930061D9B8 /* SavePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePoint.swift; sourceTree = "<group>"; };
+		0B9379FA1FCA50460061D9B8 /* StoryManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManagement.swift; sourceTree = "<group>"; };
 		0BB193561FBA68B300711428 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23E7E49B74D78F9D6ADF8E01 /* Pods-raise your daughter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-raise your daughter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-raise your daughter/Pods-raise your daughter.debug.xcconfig"; sourceTree = "<group>"; };
 		549E91FFB5175D04CA3A0480 /* Pods_raise_your_daughter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_raise_your_daughter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +80,9 @@
 				0B56401C1FBA6773009E66F6 /* Assets.xcassets */,
 				0B69BFFE1FBDF0380064F2C8 /* Launch Screen.storyboard */,
 				0B5640211FBA6773009E66F6 /* Main.storyboard */,
-				0B9379F61FC9C7A60061D9B8 /* ShareMethodsAndVariables.swift */,
+				0B9379F61FC9C7A60061D9B8 /* HighScore.swift */,
+				0B9379F81FCA4B930061D9B8 /* SavePoint.swift */,
+				0B9379FA1FCA50460061D9B8 /* StoryManagement.swift */,
 				0B5640231FBA6774009E66F6 /* data.swift */,
 				0B56401D1FBA6773009E66F6 /* homeScreen.swift */,
 				0B5640201FBA6773009E66F6 /* ViewController.swift */,
@@ -245,8 +251,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B5640281FBA6774009E66F6 /* AppDelegate.swift in Sources */,
-				0B9379F71FC9C7A60061D9B8 /* ShareMethodsAndVariables.swift in Sources */,
+				0B9379FB1FCA50460061D9B8 /* StoryManagement.swift in Sources */,
+				0B9379F71FC9C7A60061D9B8 /* HighScore.swift in Sources */,
 				0B5640271FBA6774009E66F6 /* homeScreen.swift in Sources */,
+				0B9379F91FCA4B930061D9B8 /* SavePoint.swift in Sources */,
 				0B56402A1FBA6774009E66F6 /* ViewController.swift in Sources */,
 				0B56402D1FBA6774009E66F6 /* data.swift in Sources */,
 				0B548C4E1FBF45480043F2D2 /* CustomButtons.swift in Sources */,

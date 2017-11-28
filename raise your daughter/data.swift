@@ -19,13 +19,13 @@ class Data {
                         "the fox bites you",
                         "the fox ran away"],
 
-                       ["You DEAD!",
+                       ["continue story 2",
                         "X__X",
                         "X__X",
                         "X__X",
                         "X__X"],
 
-                       ["story3",
+                       ["continue story3",
                         "story3Button1",
                         "story3Button2",
                         "story3Button1Action",
@@ -41,6 +41,6 @@ class Data {
         
          ]
     static var deadStories = ["fox riped your dead out","1","2","3","4","5","6"]
-    static var correctButton = [2,1,2,1,2,1,2]
+    static var correctButton = [2,1,2,1,2,1,2] //This mark which choice is correct on each story(n)
 
 }

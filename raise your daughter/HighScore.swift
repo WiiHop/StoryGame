@@ -9,6 +9,7 @@ import CoreData
 import UIKit
 import Foundation
 
+// MARK: Highscore keeping
 class Highscore {
     static let savePointDefault = UserDefaults.standard
     
@@ -20,7 +21,5 @@ class Highscore {
         savePointDefault.synchronize()
         highscore = savePointDefault.value(forKey: "highscore") as! Int
     }
-    
-   
     
 }

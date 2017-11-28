@@ -150,7 +150,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="off-1m-toI">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-g1-VNN" userLabel="homeButton" customClass="ScaleButton" customModule="raise_your_daughter" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-g1-VNN" userLabel="homeButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="79.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                                 <state key="normal" title="back"/>
@@ -333,6 +333,7 @@
                         <outlet property="button2" destination="Bfn-sc-mTs" id="mHq-Y1-iRc"/>
                         <outlet property="button2Label" destination="XXc-Lf-4gP" id="dMO-wO-qOd"/>
                         <outlet property="button2View" destination="N8F-W6-HAn" id="iBK-Ha-y5q"/>
+                        <outlet property="homeButton" destination="MLc-g1-VNN" id="fCV-oO-GGV"/>
                         <outlet property="pictureStoryView" destination="Hr9-HD-JIA" id="LFf-1l-PxY"/>
                         <outlet property="progressView" destination="cXW-QJ-SA8" id="cif-uL-di0"/>
                         <outlet property="skipButton" destination="iK7-jd-fYJ" id="DDe-Lc-JeB"/>
