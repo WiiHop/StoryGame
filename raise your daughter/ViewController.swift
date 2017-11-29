@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     var timer = Timer()
     var highscore = Highscore.highscore
     var savePoint = SavePoints.getSavePoint()
+    var skipOrNot = 1 // this keep track so we know if skip button want to skip or stay on the same story (1 -> skip) (0 -> noSkip)
     
     
     //hide the status bar
@@ -57,11 +58,14 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             //Show dead story and delay
             showDeadStory()
             disableButtons()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                self.savePoint = 0
-                SavePoints.setSavePoint(x: 0) //reset everytime they lose
-                self.displayNewStory()//viewDidLoad()
-            }
+            showSkipButton()//working
+            skipOrNot = 0
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+//                self.savePoint = 0
+//                SavePoints.setSavePoint(x: 0) //reset everytime they lose
+//                self.displayNewStory()//viewDidLoad()
+//            }
+            perform(#selector(wrongAnswerConsequence), with: nil , afterDelay: 10)
 
         } else {
             //SHOW SKIP BUTTON AND PROGRESS BAR
@@ -87,11 +91,14 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             //Show dead story and delay
             showDeadStory()
             disableButtons()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                self.savePoint = 0
-                SavePoints.setSavePoint(x: 0) //reset everytime the lose
-                self.displayNewStory()//viewDidLoad()
-            }
+            showSkipButton()//working
+            skipOrNot = 0
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+//                self.savePoint = 0
+//                SavePoints.setSavePoint(x: 0) //reset everytime the lose
+//                self.displayNewStory()//viewDidLoad()
+//            }
+            perform(#selector(wrongAnswerConsequence), with: nil , afterDelay: 10)
 
         } else {
             //SHOW SKIP BUTTON AND PROGRESS BAR
@@ -115,20 +122,36 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         hideViews() // show skip button
         disableButtons()
     }
-    
+    // MARK: this continues the story
     @objc func continueStory(){
         SavePoints.setSavePoint(x: self.savePoint+1)
         enablebuttons() // enable buttons
         self.displayNewStory()//viewDidLoad()
         showViews()
     }
+    // MARK: this reset the savePoint and bring the user Back to the story 0
+    @objc func wrongAnswerConsequence() {
+        self.savePoint = 0
+        SavePoints.setSavePoint(x: 0) //reset everytime the lose
+        self.displayNewStory()//viewDidLoad()
+    }
     
-    //skipButton action
+    
+    
+    //skipButton tapped
     @IBAction func skipButtonTapped(_ sender: Any) {
-        NSObject.cancelPreviousPerformRequests(withTarget: self)
-        continueStory()
-        resetTimer()
-        showViews()
+        if skipOrNot == 1 {
+            NSObject.cancelPreviousPerformRequests(withTarget: self)
+            continueStory()
+            resetTimer()
+            showViews()
+        } else {
+            NSObject.cancelPreviousPerformRequests(withTarget: self)
+            wrongAnswerConsequence()
+            resetTimer()
+            showViews()
+            skipOrNot = 1
+        }
     }
     
     
