@@ -147,46 +147,43 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7k-de-1zE" userLabel="storyView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="483"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="off-1m-toI">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="off-1m-toI" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-g1-VNN" userLabel="homeButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="79.5" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="41" height="32"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                                 <state key="normal" title="back"/>
                                                 <connections>
                                                     <action selector="segueToHomeScreenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLg-xq-dXm"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK7-jd-fYJ" userLabel="skipButton">
-                                                <rect key="frame" x="240.5" y="0.0" width="79.5" height="25"/>
-                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
-                                                <state key="normal" title="SKIP">
-                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="skipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TeH-9q-VXy"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="iK7-jd-fYJ" firstAttribute="top" secondItem="off-1m-toI" secondAttribute="top" id="5VS-qP-ete"/>
-                                            <constraint firstAttribute="trailing" secondItem="iK7-jd-fYJ" secondAttribute="trailing" id="JWj-Oi-k0C"/>
-                                            <constraint firstItem="iK7-jd-fYJ" firstAttribute="width" secondItem="off-1m-toI" secondAttribute="width" multiplier="0.25" id="P8B-9I-XYp"/>
                                             <constraint firstItem="MLc-g1-VNN" firstAttribute="leading" secondItem="off-1m-toI" secondAttribute="leading" id="RXw-hc-dtf"/>
-                                            <constraint firstItem="iK7-jd-fYJ" firstAttribute="height" secondItem="off-1m-toI" secondAttribute="height" id="SDB-Tq-6la"/>
-                                            <constraint firstItem="MLc-g1-VNN" firstAttribute="height" secondItem="iK7-jd-fYJ" secondAttribute="height" id="jWN-Op-kS6"/>
                                             <constraint firstItem="MLc-g1-VNN" firstAttribute="top" secondItem="off-1m-toI" secondAttribute="top" id="nAw-8g-KTE"/>
-                                            <constraint firstItem="MLc-g1-VNN" firstAttribute="width" secondItem="iK7-jd-fYJ" secondAttribute="width" id="rJN-3f-bjC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIv-iP-pfY" userLabel="pictureStory">
+                                        <rect key="frame" x="0.0" y="25" width="320" height="338"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hr9-HD-JIA" userLabel="pictureStoryView">
+                                                <rect key="frame" x="6" y="6" width="308" height="326"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Hr9-HD-JIA" secondAttribute="bottom" constant="6" id="CHm-po-vq0"/>
+                                            <constraint firstItem="Hr9-HD-JIA" firstAttribute="leading" secondItem="EIv-iP-pfY" secondAttribute="leading" constant="6" id="VOC-dd-dit"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hr9-HD-JIA" secondAttribute="trailing" constant="6" id="rUI-MD-KvV"/>
+                                            <constraint firstItem="Hr9-HD-JIA" firstAttribute="top" secondItem="EIv-iP-pfY" secondAttribute="top" constant="6" id="tPf-Qz-dUM"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpX-R0-3kR" userLabel="textStoryView">
-                                        <rect key="frame" x="0.0" y="407.5" width="320" height="75.5"/>
+                                        <rect key="frame" x="0.0" y="363" width="320" height="76"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ0-67-Nlg" userLabel="textLable">
-                                                <rect key="frame" x="0.0" y="0.5" width="320" height="75.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -200,23 +197,30 @@
                                             <constraint firstAttribute="trailing" secondItem="qJ0-67-Nlg" secondAttribute="trailing" id="sZc-wF-rM4"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIv-iP-pfY" userLabel="pictureStory">
-                                        <rect key="frame" x="0.0" y="25" width="320" height="385.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F87-gK-5sa" userLabel="SkipButtonView">
+                                        <rect key="frame" x="0.0" y="439" width="320" height="44"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hr9-HD-JIA" userLabel="pictureStoryView">
-                                                <rect key="frame" x="6" y="6" width="308" height="373.5"/>
-                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK7-jd-fYJ" userLabel="skipButton" customClass="skipButton" customModule="raise_your_daughter" customModuleProvider="target">
+                                                <rect key="frame" x="6" y="6" width="308" height="32"/>
+                                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
+                                                <state key="normal" title="SKIP">
+                                                    <color key="titleColor" red="0.94388335943222046" green="0.21017479780654363" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="skipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TeH-9q-VXy"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Hr9-HD-JIA" secondAttribute="bottom" constant="6" id="CHm-po-vq0"/>
-                                            <constraint firstItem="Hr9-HD-JIA" firstAttribute="leading" secondItem="EIv-iP-pfY" secondAttribute="leading" constant="6" id="VOC-dd-dit"/>
-                                            <constraint firstAttribute="trailing" secondItem="Hr9-HD-JIA" secondAttribute="trailing" constant="6" id="rUI-MD-KvV"/>
-                                            <constraint firstItem="Hr9-HD-JIA" firstAttribute="top" secondItem="EIv-iP-pfY" secondAttribute="top" constant="6" id="tPf-Qz-dUM"/>
+                                            <constraint firstItem="iK7-jd-fYJ" firstAttribute="top" secondItem="F87-gK-5sa" secondAttribute="top" constant="6" id="KVt-Oh-UgQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="iK7-jd-fYJ" secondAttribute="trailing" constant="6" id="Unk-PS-Gsr"/>
+                                            <constraint firstAttribute="bottom" secondItem="iK7-jd-fYJ" secondAttribute="bottom" constant="6" id="atb-4u-wCY"/>
+                                            <constraint firstItem="iK7-jd-fYJ" firstAttribute="leading" secondItem="F87-gK-5sa" secondAttribute="leading" constant="6" id="iCR-RC-ayk"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="FpX-R0-3kR" secondAttribute="bottom" id="26d-Gi-TjD"/>
                                     <constraint firstItem="EIv-iP-pfY" firstAttribute="top" secondItem="o7k-de-1zE" secondAttribute="top" constant="25" id="5UI-rt-c9T"/>
                                     <constraint firstItem="EIv-iP-pfY" firstAttribute="top" secondItem="off-1m-toI" secondAttribute="bottom" id="6dh-If-adt"/>
                                     <constraint firstItem="off-1m-toI" firstAttribute="top" secondItem="o7k-de-1zE" secondAttribute="top" id="7ui-Da-PS0"/>
@@ -224,12 +228,17 @@
                                     <constraint firstItem="FpX-R0-3kR" firstAttribute="height" secondItem="o7k-de-1zE" secondAttribute="height" multiplier="0.156" id="FlI-5W-hZw"/>
                                     <constraint firstItem="FpX-R0-3kR" firstAttribute="leading" secondItem="o7k-de-1zE" secondAttribute="leading" id="G6A-1f-dSn"/>
                                     <constraint firstItem="EIv-iP-pfY" firstAttribute="leading" secondItem="o7k-de-1zE" secondAttribute="leading" id="I8F-pV-OtK"/>
+                                    <constraint firstItem="FpX-R0-3kR" firstAttribute="top" secondItem="EIv-iP-pfY" secondAttribute="bottom" id="JPA-eP-0jz"/>
                                     <constraint firstAttribute="trailing" secondItem="FpX-R0-3kR" secondAttribute="trailing" id="Jom-Wr-hQl"/>
                                     <constraint firstItem="FpX-R0-3kR" firstAttribute="width" secondItem="o7k-de-1zE" secondAttribute="width" id="MVH-wM-Sfo"/>
                                     <constraint firstAttribute="trailing" secondItem="EIv-iP-pfY" secondAttribute="trailing" id="bYa-8v-cpd"/>
-                                    <constraint firstItem="EIv-iP-pfY" firstAttribute="height" secondItem="o7k-de-1zE" secondAttribute="height" multiplier="0.8" id="dR5-cK-dpe"/>
+                                    <constraint firstItem="EIv-iP-pfY" firstAttribute="height" secondItem="o7k-de-1zE" secondAttribute="height" multiplier="0.7" id="dR5-cK-dpe"/>
+                                    <constraint firstAttribute="bottom" secondItem="F87-gK-5sa" secondAttribute="bottom" id="gB7-g1-Zfs"/>
                                     <constraint firstItem="off-1m-toI" firstAttribute="leading" secondItem="o7k-de-1zE" secondAttribute="leading" id="kzG-zl-TXH"/>
                                     <constraint firstAttribute="trailing" secondItem="off-1m-toI" secondAttribute="trailing" id="qYj-YR-Pf6"/>
+                                    <constraint firstAttribute="trailing" secondItem="F87-gK-5sa" secondAttribute="trailing" id="tDQ-Hz-0lA"/>
+                                    <constraint firstItem="F87-gK-5sa" firstAttribute="leading" secondItem="o7k-de-1zE" secondAttribute="leading" id="tkC-ug-LbM"/>
+                                    <constraint firstItem="F87-gK-5sa" firstAttribute="top" secondItem="FpX-R0-3kR" secondAttribute="bottom" id="z9v-vm-Iuw"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHk-EW-7rE" userLabel="buttonView">
@@ -239,17 +248,17 @@
                                         <rect key="frame" x="0.0" y="41.5" width="320" height="2"/>
                                     </progressView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uji-9b-Zye">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="85"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160.5" height="85"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs9-Z6-qx5" userLabel="button1" customClass="Button1SimpleButton" customModule="raise_your_daughter" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="10" width="140" height="65"/>
+                                                <rect key="frame" x="10" y="10" width="140.5" height="65"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="button1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ope-9x-u9e"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhA-7y-ayP" userLabel="button1Label">
-                                                <rect key="frame" x="10" y="10" width="140" height="65"/>
+                                                <rect key="frame" x="10" y="10" width="140.5" height="65"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -267,10 +276,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8F-W6-HAn">
-                                        <rect key="frame" x="160" y="0.0" width="160" height="85"/>
+                                        <rect key="frame" x="160.5" y="0.0" width="159.5" height="85"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfn-sc-mTs" userLabel="button2" customClass="Button2SimpleButton" customModule="raise_your_daughter" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="10" width="140" height="65"/>
+                                                <rect key="frame" x="10" y="10" width="139.5" height="65"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -280,7 +289,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXc-Lf-4gP" userLabel="button2Label">
-                                                <rect key="frame" x="10" y="10" width="140" height="65"/>
+                                                <rect key="frame" x="10" y="10" width="139.5" height="65"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -313,7 +322,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="o7k-de-1zE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.85" id="37g-zZ-Vkp"/>
                             <constraint firstAttribute="trailing" secondItem="o7k-de-1zE" secondAttribute="trailing" id="7u2-Tg-2xO"/>
@@ -342,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-123.68815592203899"/>
+            <point key="canvasLocation" x="3.75" y="-124.64788732394366"/>
         </scene>
     </scenes>
     <resources>
