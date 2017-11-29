@@ -24,14 +24,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressView: GradientProgressBar!
     @IBOutlet weak var pictureStoryView: UIImageView!
     
-    //storing the save of the story *** temporary need a better way ***
-    let savePointDefault = UserDefaults.standard
+//    let savePointDefault = UserDefaults.standard
     
     //declaring variables
     var timeCounter = 0.0
     var timer = Timer()
     var highscore = Highscore.highscore
-    var savePoint = 0
+    var savePoint = SavePoints.getSavePoint()
     
     
     //hide the status bar
@@ -60,7 +59,7 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             disableButtons()
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 self.savePoint = 0
-                //self.saveFunc(x: 0); reset everytime they lose
+                SavePoints.setSavePoint(x: 0) //reset everytime they lose
                 self.displayNewStory()//viewDidLoad()
             }
 
@@ -74,8 +73,8 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             print("button1 tapped")
             self.textLable.text = Data.data[savePoint][3]
             
-            //delay and then call moveOn ... so i can use the skip button
-            perform(#selector(moveOn1), with: nil , afterDelay: 10)
+            //delay and then call continueStory ... so i can use the skip button
+            perform(#selector(continueStory), with: nil , afterDelay: 10)
             
         }
         
@@ -90,7 +89,7 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             disableButtons()
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 self.savePoint = 0
-                //self.saveFunc(x: 0); reset everytime the lose
+                SavePoints.setSavePoint(x: 0) //reset everytime the lose
                 self.displayNewStory()//viewDidLoad()
             }
 
@@ -105,7 +104,7 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             self.textLable.text = Data.data[savePoint][4]
             
             
-            //delay and then call moveOn ... so i can use the skip button
+            //delay and then call continueStory ... so i can use the skip button
             perform(#selector(continueStory), with: nil , afterDelay: 10)
             
         }
@@ -117,42 +116,12 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         disableButtons()
     }
     
-    //need to simplify these two methods
-    @objc func moveOn1(){
-        self.saveFunc(x: self.savePoint+1);
-        enablebuttons() // enable buttons
-        self.displayNewStory()//viewDidLoad()
-        showViews()
-    }
-    
-    @objc func moveOn2(){
-        self.saveFunc(x: self.savePoint+1);
-        enablebuttons() // enable buttons
-        self.displayNewStory()//viewDidLoad()
-        showViews()
-    }
-    
     @objc func continueStory(){
         SavePoints.setSavePoint(x: self.savePoint+1)
         enablebuttons() // enable buttons
         self.displayNewStory()//viewDidLoad()
         showViews()
     }
-    
-    
-    
-    
-    // this function will set the progress to iphone's memory
-    func saveFunc(x:Int){
-        savePointDefault.setValue(x, forKey: "savePoint")
-        savePointDefault.synchronize()
-    }
-    func setHighscore(x:Int){
-        savePointDefault.setValue(x, forKey: "highscore")
-        savePointDefault.synchronize()
-    }
-    
-    
     
     //skipButton action
     @IBAction func skipButtonTapped(_ sender: Any) {
@@ -230,11 +199,11 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         print("savePoint = " + String(savePoint))
         print("Data.data.count = " + String(Data.data.count))
         
-        //save highscore
+        //save highscore //WORKING
         if (highscore < savePoint) {
-            Highscore.setHighscore(x: savePoint)
+            Highscore.setHighscore(x: savePoint+1)
             highscore = savePoint
-            
+            //set Original highscore
             print("Highscore= " + String(Highscore.highscore))
         }
         
@@ -255,9 +224,6 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         //this will set save to where it used to be last time played
         if (SavePoints.savePoint > -1){
             savePoint = SavePoints.savePoint
-
-            //set Original highscore
-            Highscore.setHighscore(x: savePoint)
             
             if (savePoint < Data.data.count) { // WARNING MIGHT NEED FIXING SO IT DOESNT CRASH ***  MAYBE USE TRY AND CATCH
                 

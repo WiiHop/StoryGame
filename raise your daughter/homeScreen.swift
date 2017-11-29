@@ -10,8 +10,6 @@ import UIKit
 
 class homeScreen: UIViewController {
     @IBOutlet weak var highscoreNumLable: UILabel!
-    //declare variables
-    var highscore = Highscore.highscore
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +35,12 @@ class homeScreen: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         // MARK: Highscore Setting
-        highscore = Highscore.highscore
-        highscoreNumLable.text = String(highscore)
+        if(Highscore.highscore > SavePoints.savePoint){
+        highscoreNumLable.text = String(Highscore.highscore)
+        } else {
+            Highscore.setHighscore(x: SavePoints.savePoint)
+            highscoreNumLable.text = String(Highscore.highscore)
+        }
     }
     
     @IBAction func newGameButtonTapped(_ sender: Any) {

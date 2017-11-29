@@ -11,15 +11,22 @@ import Foundation
 
 // MARK: Highscore keeping
 class Highscore {
-    static let savePointDefault = UserDefaults.standard
-    
-    //WARNING THIS MAY CAUSE PROBLEM!!
-    static var highscore = 0 // savePointDefault.value(forKey: "highscore") as! Int
+
+    static var highscore = 0
     
     static func setHighscore(x:Int){
-        savePointDefault.setValue(x, forKey: "highscore")
-        savePointDefault.synchronize()
-        highscore = savePointDefault.value(forKey: "highscore") as! Int
+        UserDefaults.standard.set(x, forKey: "highscore")
+        highscore = getHighscore()
+    }
+    
+    //Mark: allow other classes to get highscore!
+    static func getHighscore() -> Int {
+        if let x:Int = UserDefaults.standard.object(forKey: "savePoint") as? Int {
+            highscore = x;
+        } else {
+            highscore = 0
+        }
+        return highscore
     }
     
 }
