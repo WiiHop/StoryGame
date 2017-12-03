@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     var highscore = Highscore.highscore
     var savePoint = SavePoints.getSavePoint()
     var skipOrNot = 1 // this keep track so we know if skip button want to skip or stay on the same story (1 -> skip) (0 -> noSkip)
+    let waitTime = 20.0
     
     
     //hide the status bar
@@ -60,12 +61,15 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             disableButtons()
             showSkipButton()//working
             skipOrNot = 0
+            //TESTING
+            progressView.isHidden = false
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
 //            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
 //                self.savePoint = 0
 //                SavePoints.setSavePoint(x: 0) //reset everytime they lose
 //                self.displayNewStory()//viewDidLoad()
 //            }
-            perform(#selector(wrongAnswerConsequence), with: nil , afterDelay: 10)
+            perform(#selector(wrongAnswerConsequence), with: nil , afterDelay: waitTime)
 
         } else {
             //SHOW SKIP BUTTON AND PROGRESS BAR
@@ -76,9 +80,10 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             disableButtons()
             print("button1 tapped")
             self.textLable.text = Data.data[savePoint][3]
+            self.pictureStoryView.image = UIImage(named:"action"+String(self.savePoint))
             
             //delay and then call continueStory ... so i can use the skip button
-            perform(#selector(continueStory), with: nil , afterDelay: 10)
+            perform(#selector(continueStory), with: nil , afterDelay: waitTime)
             
         }
         
@@ -93,12 +98,15 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             disableButtons()
             showSkipButton()//working
             skipOrNot = 0
+            //TESTING
+            progressView.isHidden = false
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
 //            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
 //                self.savePoint = 0
 //                SavePoints.setSavePoint(x: 0) //reset everytime the lose
 //                self.displayNewStory()//viewDidLoad()
 //            }
-            perform(#selector(wrongAnswerConsequence), with: nil , afterDelay: 10)
+            perform(#selector(wrongAnswerConsequence), with: nil , afterDelay: waitTime)
 
         } else {
             //SHOW SKIP BUTTON AND PROGRESS BAR
@@ -109,10 +117,11 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             disableButtons()
             print("button 2 tapped")
             self.textLable.text = Data.data[savePoint][4]
+            self.pictureStoryView.image = UIImage(named:"dead"+String(self.savePoint))
             
             
             //delay and then call continueStory ... so i can use the skip button
-            perform(#selector(continueStory), with: nil , afterDelay: 10)
+            perform(#selector(continueStory), with: nil , afterDelay: waitTime)
             
         }
     }
@@ -186,9 +195,9 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
     
     //timer function WARNNING WORKING ON!!!!
     @objc func updateTimeCounter() {
-        if timeCounter < 0.99 {
-            timeCounter += 0.1
-            progressView.setProgress(Float(timeCounter), animated: true)
+        if timeCounter < self.waitTime {
+            timeCounter += 1
+            progressView.setProgress(Float(timeCounter/waitTime), animated: true)
             progressView.reloadInputViews()
             print(timeCounter)
         } else {
@@ -211,7 +220,7 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
 
         DispatchQueue.main.async {
             self.textLable.text = Data.deadStories[self.savePoint]
-            self.pictureStoryView.image = UIImage(named:"dead1") //+String(self.save)
+            self.pictureStoryView.image = UIImage(named:"dead"+String(self.savePoint)) //+String(self.save)
             self.button1View.isHidden = true
             self.button2View.isHidden = true
         }

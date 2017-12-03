@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xHo-sq-4Kr">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -30,14 +30,14 @@
                         <viewControllerLayoutGuide type="bottom" id="BgW-ne-lYf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CJH-bh-cGx" userLabel="HomeView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A39-48-7Ep" userLabel="view1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBG-L7-V32" userLabel="gameButton" customClass="HomePlayButton" customModule="raise_your_daughter" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="359" height="187"/>
+                                        <rect key="frame" x="8" y="8" width="359" height="151"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="45"/>
                                         <state key="normal" title="Play">
@@ -57,13 +57,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxl-At-Egd" userLabel="view2">
-                                <rect key="frame" x="0.0" y="203" width="375" height="609.66666666666663"/>
+                                <rect key="frame" x="0.0" y="167" width="375" height="501"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qw7-oT-p0Q" userLabel="Top">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="305.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Highscore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1X-y1-5QJ" userLabel="highscoreLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="305.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
                                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="35"/>
                                                 <color key="textColor" red="0.0" green="0.79402542114257812" blue="0.96981662511825562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -78,10 +78,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISR-o7-DB9">
-                                        <rect key="frame" x="0.0" y="304.33333333333337" width="375" height="305.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="250" width="375" height="251"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bC-E9-cck">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="305.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
                                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="52"/>
                                                 <color key="textColor" red="0.0" green="0.79402542114257812" blue="0.96981662511825562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -141,11 +141,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="FullView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7k-de-1zE" userLabel="storyView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="690.33333333333337"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="off-1m-toI" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
@@ -173,10 +173,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIv-iP-pfY" userLabel="pictureStory">
-                                        <rect key="frame" x="0.0" y="24.999999999999972" width="375" height="483.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="25" width="375" height="397.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hr9-HD-JIA" userLabel="pictureStoryView">
-                                                <rect key="frame" x="6" y="6" width="363" height="471.33333333333331"/>
+                                                <rect key="frame" x="6" y="6" width="363" height="385.5"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -187,10 +187,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpX-R0-3kR" userLabel="textStoryView">
-                                        <rect key="frame" x="0.0" y="508.33333333333326" width="375" height="108"/>
+                                        <rect key="frame" x="0.0" y="422.5" width="375" height="88"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STORY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ0-67-Nlg" userLabel="textLable">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -205,10 +205,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F87-gK-5sa" userLabel="SkipButtonView">
-                                        <rect key="frame" x="0.0" y="616.33333333333337" width="375" height="74"/>
+                                        <rect key="frame" x="0.0" y="510.5" width="375" height="56.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK7-jd-fYJ" userLabel="skipButton" customClass="skipButton" customModule="raise_your_daughter" customModuleProvider="target">
-                                                <rect key="frame" x="6" y="6" width="363" height="62"/>
+                                                <rect key="frame" x="6" y="6" width="363" height="44.5"/>
                                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
                                                 <state key="normal" title="SKIP">
                                                     <color key="titleColor" red="0.94388335943222046" green="0.21017479780654363" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -249,23 +249,23 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHk-EW-7rE" userLabel="buttonView">
-                                <rect key="frame" x="0.0" y="690.33333333333337" width="375" height="87.666666666666629"/>
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="cXW-QJ-SA8" customClass="GradientProgressBar" customModule="GradientProgressBar">
-                                        <rect key="frame" x="0.0" y="42.666666666666629" width="375" height="2"/>
+                                        <rect key="frame" x="0.0" y="48.5" width="375" height="2"/>
                                     </progressView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uji-9b-Zye">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="87.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs9-Z6-qx5" userLabel="button1" customClass="Button1SimpleButton" customModule="raise_your_daughter" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="10" width="167.66666666666666" height="67.666666666666671"/>
+                                                <rect key="frame" x="10" y="10" width="168" height="80"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="button1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ope-9x-u9e"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhA-7y-ayP" userLabel="button1Label">
-                                                <rect key="frame" x="10" y="10" width="167.66666666666666" height="67.666666666666671"/>
+                                                <rect key="frame" x="10" y="10" width="168" height="80"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -283,10 +283,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8F-W6-HAn">
-                                        <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="87.666666666666671"/>
+                                        <rect key="frame" x="188" y="0.0" width="187" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfn-sc-mTs" userLabel="button2" customClass="Button2SimpleButton" customModule="raise_your_daughter" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="10" width="167.33333333333334" height="67.666666666666671"/>
+                                                <rect key="frame" x="10" y="10" width="167" height="80"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -296,7 +296,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXc-Lf-4gP" userLabel="button2Label">
-                                                <rect key="frame" x="10" y="10" width="167.33333333333334" height="67.666666666666671"/>
+                                                <rect key="frame" x="10" y="10" width="167" height="80"/>
                                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -362,6 +362,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="0" width="2048" height="2048"/>
+        <image name="0" width="2000" height="2222"/>
     </resources>
 </document>
