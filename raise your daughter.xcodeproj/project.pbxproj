@@ -19,6 +19,8 @@
 		0B9379F71FC9C7A60061D9B8 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9379F61FC9C7A60061D9B8 /* HighScore.swift */; };
 		0B9379F91FCA4B930061D9B8 /* SavePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9379F81FCA4B930061D9B8 /* SavePoint.swift */; };
 		0B9379FB1FCA50460061D9B8 /* StoryManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9379FA1FCA50460061D9B8 /* StoryManagement.swift */; };
+		0BB3807F1FD37F1C005BEAE6 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0BB3807E1FD37F1C005BEAE6 /* sample.mp3 */; };
+		0BB380811FD38469005BEAE6 /* Art Of Silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0BB380801FD38469005BEAE6 /* Art Of Silence.mp3 */; };
 		1609EF367C5EACAAA5BED8A1 /* Pods_raise_your_daughter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549E91FFB5175D04CA3A0480 /* Pods_raise_your_daughter.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		0B9379F81FCA4B930061D9B8 /* SavePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePoint.swift; sourceTree = "<group>"; };
 		0B9379FA1FCA50460061D9B8 /* StoryManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManagement.swift; sourceTree = "<group>"; };
 		0BB193561FBA68B300711428 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BB3807E1FD37F1C005BEAE6 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		0BB380801FD38469005BEAE6 /* Art Of Silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Art Of Silence.mp3"; sourceTree = "<group>"; };
 		23E7E49B74D78F9D6ADF8E01 /* Pods-raise your daughter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-raise your daughter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-raise your daughter/Pods-raise your daughter.debug.xcconfig"; sourceTree = "<group>"; };
 		549E91FFB5175D04CA3A0480 /* Pods_raise_your_daughter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_raise_your_daughter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7802D294A3491F81471EF9F4 /* Pods-raise your daughter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-raise your daughter.release.xcconfig"; path = "Pods/Target Support Files/Pods-raise your daughter/Pods-raise your daughter.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				0B548C4A1FBF450A0043F2D2 /* Custom Button Classes */,
 				0B56401E1FBA6773009E66F6 /* AppDelegate.swift */,
 				0B56401C1FBA6773009E66F6 /* Assets.xcassets */,
+				0BB3807D1FD37ED3005BEAE6 /* music */,
 				0B69BFFE1FBDF0380064F2C8 /* Launch Screen.storyboard */,
 				0B5640211FBA6773009E66F6 /* Main.storyboard */,
 				0B9379F61FC9C7A60061D9B8 /* HighScore.swift */,
@@ -98,6 +103,15 @@
 				0B548C4D1FBF45480043F2D2 /* CustomButtons.swift */,
 			);
 			path = "Custom Button Classes";
+			sourceTree = "<group>";
+		};
+		0BB3807D1FD37ED3005BEAE6 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				0BB380801FD38469005BEAE6 /* Art Of Silence.mp3 */,
+				0BB3807E1FD37F1C005BEAE6 /* sample.mp3 */,
+			);
+			path = music;
 			sourceTree = "<group>";
 		};
 		52247D33A4CBAC224A0C22D0 /* Pods */ = {
@@ -181,7 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB3807F1FD37F1C005BEAE6 /* sample.mp3 in Resources */,
 				0B5640261FBA6774009E66F6 /* Assets.xcassets in Resources */,
+				0BB380811FD38469005BEAE6 /* Art Of Silence.mp3 in Resources */,
 				0B69BFFF1FBDF0380064F2C8 /* Launch Screen.storyboard in Resources */,
 				0B56402B1FBA6774009E66F6 /* Main.storyboard in Resources */,
 			);

@@ -7,12 +7,30 @@
 //
 
 import UIKit
+import AVFoundation
 
 class homeScreen: UIViewController {
     @IBOutlet weak var highscoreNumLable: UILabel!
     
+    var audioPlayer = AVAudioPlayer()
+    
+    //set Up audio
+    func setUpbackgroundSound() {
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "Art Of Silence", ofType: "mp3")!))
+            audioPlayer.numberOfLoops = -1
+            audioPlayer.prepareToPlay()
+        } catch {
+            print("error caught: ")
+            print(error)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpbackgroundSound()
+        //start background music
+        audioPlayer.play()
         
     }
     
