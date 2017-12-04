@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B09350A1FD49D7C004399D4 /* VoiceOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0935091FD49D7C004399D4 /* VoiceOver.swift */; };
+		0B0935171FD4A78E004399D4 /* DeadVoiceOver0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0B0935161FD4A78E004399D4 /* DeadVoiceOver0.m4a */; };
+		0B0935191FD4A797004399D4 /* ActionVoiceOver0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0B0935181FD4A797004399D4 /* ActionVoiceOver0.m4a */; };
+		0B09351B1FD4A7A7004399D4 /* StoryVoiceOver0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0B09351A1FD4A7A6004399D4 /* StoryVoiceOver0.m4a */; };
 		0B548C4E1FBF45480043F2D2 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B548C4D1FBF45480043F2D2 /* CustomButtons.swift */; };
 		0B5640251FBA6774009E66F6 /* MyCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B56401A1FBA6772009E66F6 /* MyCoreDataModel.xcdatamodeld */; };
 		0B5640261FBA6774009E66F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B56401C1FBA6773009E66F6 /* Assets.xcassets */; };
@@ -26,6 +30,10 @@
 
 /* Begin PBXFileReference section */
 		0B07F6E31F867D21007C1C39 /* raise your daughter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "raise your daughter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B0935091FD49D7C004399D4 /* VoiceOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOver.swift; sourceTree = "<group>"; };
+		0B0935161FD4A78E004399D4 /* DeadVoiceOver0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = DeadVoiceOver0.m4a; sourceTree = "<group>"; };
+		0B0935181FD4A797004399D4 /* ActionVoiceOver0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ActionVoiceOver0.m4a; sourceTree = "<group>"; };
+		0B09351A1FD4A7A6004399D4 /* StoryVoiceOver0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoryVoiceOver0.m4a; sourceTree = "<group>"; };
 		0B548C4D1FBF45480043F2D2 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		0B56401B1FBA6772009E66F6 /* MyCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		0B56401C1FBA6773009E66F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,10 +99,54 @@
 				0B5640231FBA6774009E66F6 /* data.swift */,
 				0B56401D1FBA6773009E66F6 /* homeScreen.swift */,
 				0B5640201FBA6773009E66F6 /* ViewController.swift */,
+				0B0935081FD49D64004399D4 /* voice Over */,
 				0B56401A1FBA6772009E66F6 /* MyCoreDataModel.xcdatamodeld */,
 				0BB193561FBA68B300711428 /* Info.plist */,
 			);
 			path = "raise your daughter";
+			sourceTree = "<group>";
+		};
+		0B0935081FD49D64004399D4 /* voice Over */ = {
+			isa = PBXGroup;
+			children = (
+				0B09350B1FD49EC6004399D4 /* voiceOverAudios */,
+				0B0935091FD49D7C004399D4 /* VoiceOver.swift */,
+			);
+			path = "voice Over";
+			sourceTree = "<group>";
+		};
+		0B09350B1FD49EC6004399D4 /* voiceOverAudios */ = {
+			isa = PBXGroup;
+			children = (
+				0B0935151FD4A660004399D4 /* storyVoiceOver */,
+				0B0935141FD4A652004399D4 /* actionVoiceOver */,
+				0B0935131FD4A63B004399D4 /* deadVoiceOver */,
+			);
+			path = voiceOverAudios;
+			sourceTree = "<group>";
+		};
+		0B0935131FD4A63B004399D4 /* deadVoiceOver */ = {
+			isa = PBXGroup;
+			children = (
+				0B0935161FD4A78E004399D4 /* DeadVoiceOver0.m4a */,
+			);
+			path = deadVoiceOver;
+			sourceTree = "<group>";
+		};
+		0B0935141FD4A652004399D4 /* actionVoiceOver */ = {
+			isa = PBXGroup;
+			children = (
+				0B0935181FD4A797004399D4 /* ActionVoiceOver0.m4a */,
+			);
+			path = actionVoiceOver;
+			sourceTree = "<group>";
+		};
+		0B0935151FD4A660004399D4 /* storyVoiceOver */ = {
+			isa = PBXGroup;
+			children = (
+				0B09351A1FD4A7A6004399D4 /* StoryVoiceOver0.m4a */,
+			);
+			path = storyVoiceOver;
 			sourceTree = "<group>";
 		};
 		0B548C4A1FBF450A0043F2D2 /* Custom Button Classes */ = {
@@ -195,8 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0935191FD4A797004399D4 /* ActionVoiceOver0.m4a in Resources */,
+				0B0935171FD4A78E004399D4 /* DeadVoiceOver0.m4a in Resources */,
 				0BB3807F1FD37F1C005BEAE6 /* sample.mp3 in Resources */,
 				0B5640261FBA6774009E66F6 /* Assets.xcassets in Resources */,
+				0B09351B1FD4A7A7004399D4 /* StoryVoiceOver0.m4a in Resources */,
 				0BB380811FD38469005BEAE6 /* Art Of Silence.mp3 in Resources */,
 				0B69BFFF1FBDF0380064F2C8 /* Launch Screen.storyboard in Resources */,
 				0B56402B1FBA6774009E66F6 /* Main.storyboard in Resources */,
@@ -272,6 +327,7 @@
 				0B5640271FBA6774009E66F6 /* homeScreen.swift in Sources */,
 				0B9379F91FCA4B930061D9B8 /* SavePoint.swift in Sources */,
 				0B56402A1FBA6774009E66F6 /* ViewController.swift in Sources */,
+				0B09350A1FD49D7C004399D4 /* VoiceOver.swift in Sources */,
 				0B56402D1FBA6774009E66F6 /* data.swift in Sources */,
 				0B548C4E1FBF45480043F2D2 /* CustomButtons.swift in Sources */,
 				0B5640251FBA6774009E66F6 /* MyCoreDataModel.xcdatamodeld in Sources */,

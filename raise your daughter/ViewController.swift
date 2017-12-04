@@ -42,9 +42,11 @@ class ViewController: UIViewController {
     
     // MARK: ViewDidLoad()
     override func viewDidLoad() {
+        super.viewDidLoad()
         print(Data.data.count)
         displayNewStory()
-        
+        //playVoiceOver(voType: "Story",x: 0) ---> this was move to displayNewStory() but may cause crash
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,14 +63,8 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             disableButtons()
             showSkipButton()//working
             skipOrNot = 0
-            //TESTING
             progressView.isHidden = false
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-//                self.savePoint = 0
-//                SavePoints.setSavePoint(x: 0) //reset everytime they lose
-//                self.displayNewStory()//viewDidLoad()
-//            }
             perform(#selector(wrongAnswerConsequence), with: nil , afterDelay: waitTime)
 
         } else {
@@ -79,8 +75,9 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
             disableButtons()
             print("button1 tapped")
-            self.textLable.text = Data.data[savePoint][3]
-            self.pictureStoryView.image = UIImage(named:"action"+String(self.savePoint))
+            self.textLable.text = Data.data[savePoint][3] // display story text
+            self.pictureStoryView.image = UIImage(named:"action"+String(self.savePoint)) // display action image
+            playVoiceOver(voType: "Action", x: 0) // play action voice over
             
             //delay and then call continueStory ... so i can use the skip button
             perform(#selector(continueStory), with: nil , afterDelay: waitTime)
@@ -98,14 +95,8 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             disableButtons()
             showSkipButton()//working
             skipOrNot = 0
-            //TESTING
             progressView.isHidden = false
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-//                self.savePoint = 0
-//                SavePoints.setSavePoint(x: 0) //reset everytime the lose
-//                self.displayNewStory()//viewDidLoad()
-//            }
             perform(#selector(wrongAnswerConsequence), with: nil , afterDelay: waitTime)
 
         } else {
@@ -116,9 +107,9 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
             disableButtons()
             print("button 2 tapped")
-            self.textLable.text = Data.data[savePoint][4]
-            self.pictureStoryView.image = UIImage(named:"dead"+String(self.savePoint))
-            
+            self.textLable.text = Data.data[savePoint][4] //display story text
+            self.pictureStoryView.image = UIImage(named:"dead"+String(self.savePoint)) // display action image
+            playVoiceOver(voType: "Action", x: 0) // play action voice over
             
             //delay and then call continueStory ... so i can use the skip button
             perform(#selector(continueStory), with: nil , afterDelay: waitTime)
@@ -178,16 +169,19 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         homeButton.isEnabled = true
     }
     
-    //hide everything
+    //hide everything and show skip button
     func hideViews(){
         button1View.isHidden = true
         button2View.isHidden = true
+        homeButton.isHidden = true
         skipButton.isHidden = false
     }
     
+    //show everything and hid skip button
     func showViews(){
         button1View.isHidden = false
         button2View.isHidden = false
+        homeButton.isHidden = false
         enablebuttons()
         skipButton.isHidden = true
     }
@@ -213,6 +207,8 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
     }
     
     @IBAction func segueToHomeScreenButton(_ sender: Any) {
+        //WARNING: This stopVoice Over may cause problems
+        stopVoiceOver()
         dismiss(animated: false, completion: nil)
     }
     
@@ -221,11 +217,13 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         DispatchQueue.main.async {
             self.textLable.text = Data.deadStories[self.savePoint]
             self.pictureStoryView.image = UIImage(named:"dead"+String(self.savePoint)) //+String(self.save)
+            playVoiceOver(voType: "Dead",x: 0)    //play dead voice over
             self.button1View.isHidden = true
             self.button2View.isHidden = true
         }
     }
     
+    //display the story
     func displayNewStory() {
         
         print("savePoint = " + String(savePoint))
@@ -259,13 +257,16 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             
             if (savePoint < Data.data.count) { // WARNING MIGHT NEED FIXING SO IT DOESNT CRASH ***  MAYBE USE TRY AND CATCH
                 
-                //reset the story , reset the buttons' labels
+                //reset the story , reset the buttons' labels play
                 textLable.text = Data.data[savePoint][0]
                 button1Label.text = Data.data[savePoint][1]
                 button2Label.text = Data.data[savePoint][2]
 
-                //set PictureStoryView to appropriate picture
+                //set PictureStoryView to appropriate story's picture
                 pictureStoryView.image = UIImage(named:String(savePoint))
+                
+                //play the story voice over
+                playVoiceOver(voType: "Story",x: 0)
             }
             else {
                 print("savePoint is too big")

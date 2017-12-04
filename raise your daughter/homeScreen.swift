@@ -19,9 +19,9 @@ class homeScreen: UIViewController {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "Art Of Silence", ofType: "mp3")!))
             audioPlayer.numberOfLoops = -1
+            audioPlayer.volume = 0.1
             audioPlayer.prepareToPlay()
         } catch {
-            print("error caught: ")
             print(error)
         }
     }
@@ -31,6 +31,7 @@ class homeScreen: UIViewController {
         setUpbackgroundSound()
         //start background music
         audioPlayer.play()
+        
         
     }
     
@@ -59,10 +60,7 @@ class homeScreen: UIViewController {
             Highscore.setHighscore(x: SavePoints.savePoint)
             highscoreNumLable.text = String(Highscore.highscore)
         }
-    }
-    
-    @IBAction func newGameButtonTapped(_ sender: Any) {
-        
+
     }
     
     //This code segue to the homescreen
