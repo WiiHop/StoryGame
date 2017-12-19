@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button2View: UIView!
     @IBOutlet weak var progressView: GradientProgressBar!
     @IBOutlet weak var pictureStoryView: UIImageView!
+    @IBOutlet weak var retryButton: RetryButton!
     
 //    let savePointDefault = UserDefaults.standard
     
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print(Data.data.count)
         displayNewStory()
-        //playVoiceOver(voType: "Story",x: 0) ---> this was move to displayNewStory() but may cause crash
+
 
     }
     
@@ -54,6 +55,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: BUTTON TAPPED FUNCTIONS
+    
     @IBAction func button1Tapped(_ sender: Any) {
         if(savePoint>Data.data.count-1 || Data.correctButton[savePoint] != 1){
 print("This data.correct =" + String(Data.correctButton[savePoint]))
@@ -61,7 +64,8 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             //Show dead story and delay
             showDeadStory()
             disableButtons()
-            showSkipButton()//working
+            //WARNING CHANGING CODE ON THE BOTTOM showSkipButton()//working
+            showRetryButton()
             skipOrNot = 0
             progressView.isHidden = false
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
@@ -93,7 +97,8 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             //Show dead story and delay
             showDeadStory()
             disableButtons()
-            showSkipButton()//working
+            //WARNING CHANGING CODE ON THE BOTTOM showSkipButton()//working
+            showRetryButton()
             skipOrNot = 0
             progressView.isHidden = false
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
@@ -122,6 +127,13 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         hideViews() // show skip button
         disableButtons()
     }
+    
+    func showRetryButton(){
+        hideViews()
+        skipButton.isHidden = true; // might not need to hide skipButton
+        retryButton.isHidden = false;
+    }
+    
     // MARK: this continues the story
     @objc func continueStory(){
         SavePoints.setSavePoint(x: self.savePoint+1)
@@ -154,6 +166,7 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         }
     }
     
+    //MARK: Button functions
     
     //disable button1 and button2 and homeButton
     func disableButtons(){
@@ -177,6 +190,11 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         skipButton.isHidden = false
     }
     
+    //hide skip button and show retry button
+    func hideSkipButtonShowRetryButton(){
+        retryButton.isHidden = true
+    }
+    
     //show everything and hid skip button
     func showViews(){
         button1View.isHidden = false
@@ -184,6 +202,7 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         homeButton.isHidden = false
         enablebuttons()
         skipButton.isHidden = true
+        retryButton.isHidden = true
     }
     
     
@@ -277,7 +296,13 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         } else {
             SavePoints.setSavePoint(x: 0)
         }
-    
-    
     }
+
+    
+    
+    
+
+
 }
+
+

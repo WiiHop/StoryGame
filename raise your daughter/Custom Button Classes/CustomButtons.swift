@@ -77,6 +77,20 @@ class skipButton: SimpleButton {
 }
 
 
+class RetryButton: SimpleButton {
+    override func configureButtonStyles() {
+        super.configureButtonStyles()
+        setShadowRadius(10, for: .normal, animated: true)
+        setShadowRadius(3, for: .highlighted, animated: true)
+        setBackgroundColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1.0) /* #ffffff */, for: .normal, animated: true)
+        setShadowColor(UIColor.gray, for: .normal)
+        setShadowOpacity(1.0, for: .normal, animated: true)
+        setShadowOffset(CGSize(width: 0, height: 0), for: .normal, animated: true)
+        setTitle("Retry", for: .normal)
+    }
+}
+
+
 
 // MARK: extra subclasses for SimpleButton pod
 

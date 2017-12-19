@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xHo-sq-4Kr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xHo-sq-4Kr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -218,12 +218,24 @@
                                                     <action selector="skipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TeH-9q-VXy"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIe-6v-vrm" userLabel="retryButton" customClass="RetryButton" customModule="raise_your_daughter" customModuleProvider="target">
+                                                <rect key="frame" x="6" y="6" width="363" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
+                                                <state key="normal" title="RETRY">
+                                                    <color key="titleColor" red="0.94351774454116821" green="0.21024280786514282" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="OIe-6v-vrm" firstAttribute="top" secondItem="F87-gK-5sa" secondAttribute="top" constant="6" id="DV3-2h-jZo"/>
                                             <constraint firstItem="iK7-jd-fYJ" firstAttribute="top" secondItem="F87-gK-5sa" secondAttribute="top" constant="6" id="KVt-Oh-UgQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="OIe-6v-vrm" secondAttribute="trailing" constant="6" id="MM4-DO-Kdd"/>
                                             <constraint firstAttribute="trailing" secondItem="iK7-jd-fYJ" secondAttribute="trailing" constant="6" id="Unk-PS-Gsr"/>
+                                            <constraint firstAttribute="bottom" secondItem="OIe-6v-vrm" secondAttribute="bottom" constant="6" id="aIQ-gA-Q4y"/>
                                             <constraint firstAttribute="bottom" secondItem="iK7-jd-fYJ" secondAttribute="bottom" constant="6" id="atb-4u-wCY"/>
                                             <constraint firstItem="iK7-jd-fYJ" firstAttribute="leading" secondItem="F87-gK-5sa" secondAttribute="leading" constant="6" id="iCR-RC-ayk"/>
+                                            <constraint firstItem="OIe-6v-vrm" firstAttribute="leading" secondItem="F87-gK-5sa" secondAttribute="leading" constant="6" id="sl8-jY-rgf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -352,6 +364,7 @@
                         <outlet property="homeButton" destination="MLc-g1-VNN" id="fCV-oO-GGV"/>
                         <outlet property="pictureStoryView" destination="Hr9-HD-JIA" id="LFf-1l-PxY"/>
                         <outlet property="progressView" destination="cXW-QJ-SA8" id="cif-uL-di0"/>
+                        <outlet property="retryButton" destination="OIe-6v-vrm" id="7Jf-fB-0ot"/>
                         <outlet property="skipButton" destination="iK7-jd-fYJ" id="DDe-Lc-JeB"/>
                         <outlet property="textLable" destination="qJ0-67-Nlg" id="N6G-2g-2ap"/>
                     </connections>
