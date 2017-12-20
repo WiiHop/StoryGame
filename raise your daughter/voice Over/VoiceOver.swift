@@ -15,7 +15,7 @@ var voice = AVAudioPlayer()
 func prepareVoiceOver(voType: String,x : Int) {
     do {
         voice = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: voType + "VoiceOver" + String(x), ofType: "m4a")!))
-        voice.numberOfLoops = 100
+        voice.numberOfLoops = 0
         voice.prepareToPlay()
     } catch {
         print("error caught: ")

@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var button2View: UIView!
     @IBOutlet weak var progressView: GradientProgressBar!
     @IBOutlet weak var pictureStoryView: UIImageView!
-    @IBOutlet weak var retryButton: RetryButton!
     
 //    let savePointDefault = UserDefaults.standard
     
@@ -32,10 +31,10 @@ class ViewController: UIViewController {
     var timer = Timer()
     var highscore = Highscore.highscore
     var savePoint = SavePoints.getSavePoint()
-    var skipOrNot = 1 // this keep track so we know if skip button want to skip or stay on the same story (1 -> skip) (0 -> noSkip)
-    let waitTime = 20.0
+    var SkipOrNot = true // this keep track so we know if skip button want to skip or stay on the same story
+    let waitTime = 15.0
     
-    
+
     //hide the status bar
     override var prefersStatusBarHidden: Bool {
         return true
@@ -64,14 +63,14 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
             //Show dead story and delay
             showDeadStory()
             disableButtons()
-            //WARNING CHANGING CODE ON THE BOTTOM showSkipButton()//working
-            showRetryButton()
-            skipOrNot = 0
+            showSkipButton()
+            SkipOrNot = false
             progressView.isHidden = false
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
             perform(#selector(wrongAnswerConsequence), with: nil , afterDelay: waitTime)
 
         } else {
+            SkipOrNot = true
             //SHOW SKIP BUTTON AND PROGRESS BAR
             progressView.isHidden = false
             showSkipButton()
@@ -92,19 +91,19 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
     
     @IBAction func button2Tapped(_ sender: Any) {
         if(savePoint>Data.data.count-1 || Data.correctButton[savePoint] != 2){
+            SkipOrNot = false
             print("This data.correct =" + String(Data.correctButton[savePoint]))
             print("inside if")
             //Show dead story and delay
             showDeadStory()
             disableButtons()
-            //WARNING CHANGING CODE ON THE BOTTOM showSkipButton()//working
-            showRetryButton()
-            skipOrNot = 0
+            showSkipButton()
             progressView.isHidden = false
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimeCounter), userInfo: nil, repeats: true)
             perform(#selector(wrongAnswerConsequence), with: nil , afterDelay: waitTime)
 
         } else {
+            SkipOrNot = true
             //SHOW SKIP BUTTON AND PROGRESS BAR
             progressView.isHidden = false
             showSkipButton()
@@ -126,44 +125,54 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
     @objc func showSkipButton(){
         hideViews() // show skip button
         disableButtons()
-    }
-    
-    func showRetryButton(){
-        hideViews()
-        skipButton.isHidden = true; // might not need to hide skipButton
-        retryButton.isHidden = false;
+        changeSkipButtonAndRetryButton(continueStory: SkipOrNot)
     }
     
     // MARK: this continues the story
     @objc func continueStory(){
-        SavePoints.setSavePoint(x: self.savePoint+1)
+        savePoint = savePoint + 1
+        SavePoints.setSavePoint(x: self.savePoint)
         enablebuttons() // enable buttons
         self.displayNewStory()//viewDidLoad()
         showViews()
     }
     // MARK: this reset the savePoint and bring the user Back to the story 0
     @objc func wrongAnswerConsequence() {
-        self.savePoint = 0
-        SavePoints.setSavePoint(x: 0) //reset everytime the lose
+        if savePoint > 0 {
+            print("we subtract 1")
+            self.savePoint = savePoint - 1 //WARNING : this may cause a crash
+        } else {
+            print("we set savepoint to 0")
+        self.savePoint = 0 //WARNING : this may cause a crash
+        }
+        SavePoints.setSavePoint(x: savePoint) //reset everytime the lose
         self.displayNewStory()//viewDidLoad()
+        SkipOrNot = true //WARNING
+        
+    }
+    
+    //change skip button to retry button and retry button to skip when appropriate
+    func changeSkipButtonAndRetryButton(continueStory : Bool) {
+        if continueStory {
+            skipButton.setTitle("skip", for: .normal)
+        } else {
+            skipButton.setTitle("try again", for: .normal)
+        }
     }
     
     
     
     //skipButton tapped
     @IBAction func skipButtonTapped(_ sender: Any) {
-        if skipOrNot == 1 {
+        if SkipOrNot == true {
             NSObject.cancelPreviousPerformRequests(withTarget: self)
             continueStory()
-            resetTimer()
-            showViews()
         } else {
             NSObject.cancelPreviousPerformRequests(withTarget: self)
             wrongAnswerConsequence()
-            resetTimer()
-            showViews()
-            skipOrNot = 1
         }
+
+        
     }
     
     //MARK: Button functions
@@ -190,11 +199,6 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         skipButton.isHidden = false
     }
     
-    //hide skip button and show retry button
-    func hideSkipButtonShowRetryButton(){
-        retryButton.isHidden = true
-    }
-    
     //show everything and hid skip button
     func showViews(){
         button1View.isHidden = false
@@ -202,7 +206,6 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
         homeButton.isHidden = false
         enablebuttons()
         skipButton.isHidden = true
-        retryButton.isHidden = true
     }
     
     
@@ -244,6 +247,10 @@ print("This data.correct =" + String(Data.correctButton[savePoint]))
     
     //display the story
     func displayNewStory() {
+        
+        //next two line shows the button and stop count down for wait time during action story
+        resetTimer()
+        showViews()
         
         print("savePoint = " + String(savePoint))
         print("Data.data.count = " + String(Data.data.count))

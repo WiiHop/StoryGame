@@ -13,11 +13,11 @@ class Data {
 //    INNER index:    0              1              2                  3                4
 //    INNER value: storyDetails  button1Label    button2Label    button1Action    button2Action
     static var data = [
-                        ["It is the year 1969, a hero was born and his crack head parents decided to name him ...",
-                        "Stevie Wonder",
-                        "Bob Bin laden",
-                        "Stevie Wonder, was a great name for an up coming hero, the hero's dad said...",
-                        "incorrect"],
+                        ["You are steve, one of the most notorious and dangerous man/woman/other...dophins... whatever in the world. Do you Understand?",
+                        "yes",
+                        "no",
+                        "wow such a smart gamer... lets continue this awesome story shal we ?",
+                        "INCORRECT ANSWER -> GOTO DEAD STORY"],
 
                        ["Steve's dad decided to put steve in",
                         "Public school...",
@@ -41,8 +41,7 @@ class Data {
         
          ]
     static var deadStories = [
-            "USA Seal team was able to travel back in time and executed Bob Bin Laden who is going to be the notorious Osama Bin Laden!",
-            "Steve drowned",
+            "Becuase of your idiotic answer steve who you! are supose to be was dragged into the street and shot DEAD! feels good?!",
             "2",
             "3",
             "4",
